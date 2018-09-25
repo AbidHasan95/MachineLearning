@@ -1,0 +1,2487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="alternate" hreflang="hi" href="https://www.digit.in/hi/" /><link rel="alternate" hreflang="te" href="https://www.digit.in/te/" /><link rel="alternate" hreflang="mr" href="https://www.digit.in/mr/" /><link rel="alternate" hreflang="ml" href="https://www.digit.in/ml/" /><meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><meta name="viewport" content="width=device-width, initial-scale=1"><meta property="fb:admins" content="100000664578610" /><meta name="google-site-verification" content="yCA_C5U8R-4qHksDGWvywvwfOoKGUbcnWSNOSy1Ju14" /><meta property="fb:pages" content="110963532384" /><meta name="theme-color" content="#F80C3C"/><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="//cdn.digit.in"><link rel="dns-prefetch" href="//static.digit.in"><link rel="dns-prefetch" href="//img.youtube.com"><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//pubads.g.doubleclick.net"><link rel="dns-prefetch" href="//s3.amazonaws.com"><link rel="dns-prefetch" href="//connect.facebook.net"><link rel="dns-prefetch" href="//platform.twitter.com"><link rel="dns-prefetch" href="//ad.doubleclick.net"><link rel="dns-prefetch" href="//googletagmanager.com"><link rel="dns-prefetch" href="//phandoplayer1.phando.com"><link rel="dns-prefetch" href="//fonts.gstatic.com"><link rel="dns-prefetch" href="//googleads.g.doubleclick.net"><link rel="dns-prefetch" href="//evt.izooto.com"><link rel="dns-prefetch" href="//staticxx.facebook.com"><link rel="dns-prefetch" href="//adservice.google.co.in"><link rel="dns-prefetch" href="//google-analytics.com"><link rel="dns-prefetch" href="//analytics.phando.com"><link rel="dns-prefetch" href="//securepubads.g.doubleclick.net"><title>Digit: Technology Advice, Product Reviews, Latest News, Free Downloads</title><meta name="keywords" content="Digit, Gadget Reviews, Technology News, Tech News, Best Gadgets, Digit Magazine" /><meta name="description" content="Digit: Get sound technology advice on buying products. Read in-depth reviews, features and watch videos on latest mobile phones, laptops, tablets, digital cameras, notebooks, apps and more" /><meta name="news_keywords" content="Digit, Gadget Reviews, Technology News, Tech News, Best Gadgets, Digit Magazine" /><meta name="inmobi-site-verification" content="e04daef953b07eaac869d3bc99025ca4" /><meta property="og:site_name" content="Digit" /><meta property="og:type" content="article" /><!-- Begin comScore Tag --><script>
+    var _comscore = _comscore || [];
+    _comscore.push({c1: "2", c2: "9989804"});
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script><noscript><img src="https://sb.scorecardresearch.com/p?c1=2&c2=9989804&cv=2.0&cj=1" /></noscript><!-- End comScore Tag --><!-- Pageview Start By Siddharth Singh --><script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-47563450-1', 'digit.in');
+    ga('send', 'pageview');
+
+</script><!-- Pageview End By Siddharth Singh --><!-- Set Abc Code for video Listing and Detail Start --><!-- Set Abc Code for video Listing and Detail End --><!-- Facebook Pixel Code --><script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '125458794835259');
+fbq('track', "PageView");
+
+</script><noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=125458794835259&ev=PageView&noscript=1"
+/></noscript><!-- End Facebook Pixel Code --><!--Add BY Tarun DA-453(izooto) 28-03-2018 --><script> window._izq = window._izq || []; window._izq.push(["init"]); </script><script async="true" src="https://cdn.izooto.com/scripts/da25661407fc09147ead36c6617d669ebee637f1.js"></script><!-- Add By Tarun DA-459(izooto) 05-04-2018 --><!-- End DA-459 --><link type="image/x-icon" href="https://cdn.digit.in/bundles/thinkdigitfrontend/images/favicon.ico?v=82" rel="icon"><link href="/images/favicon.ico" rel="shortcut icon"><link rel="stylesheet" href="https://cdn.digit.in/bundles/thinkdigitfrontend/css/main_78.css?v=82" /><link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><script src="https://cdn.digit.in/bundles/thinkdigitfrontend/js/main_26.js?v=82"></script><!--  Vizure script start --><!--  Vizure script start end --><script type="text/javascript">
+        var __st_loadLate=true; 
+                //naushad=>f0db7be8-d304-4ccc-bf46-8dd458150316
+                //sunny=>405e4887-06d9-4c9e-953d-f0e3053a7769
+    </script><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" charset="utf-8">
+
+$(function() {function launch() {
+    $('#commonForm').lightbox_me({centered: true, onLoad: function() { $('#commonForm').find('input:first').focus()}});}
+        $('#askQuestion-1, #addQuestion-2').click(function() {
+        $("#commonForm").lightbox_me({centered: true, onLoad: function() {
+        $("#commonForm").find("input:first").focus();
+        $('body').css('overflow','hidden');
+        }});
+        e.preventDefault();
+    });
+});
+$(function() {  
+    $('#commonForm .loginSignArea div').hide();
+    $('#commonForm .loginSignArea div:first').show();
+    $('#commonForm .loginSignArea ul li:first').addClass('active');
+    $('#ask_A_Question a').click(function(){
+        $('#commonForm .loginSignArea ul li').removeClass('active');
+        $(this).parent().addClass('active');
+        var currentTab = $(this).attr('href');
+        $('#commonForm .loginSignArea div').hide();
+        $(currentTab).show();
+        return false;
+    });
+    $('.loginshow').click(function(){ 
+        $('#ask_A_Question').show();
+        $('#commonForm .loginSignArea div').hide(); 
+        $('#commonForm .loginSignArea div:first').show();
+        $('#commonForm .loginSignArea ul li').removeClass('active');
+        $('#commonForm .loginSignArea ul li:first').addClass('active');
+    });
+});
+
+
+
+$(function() {function launch() {
+    $('#sign_up').lightbox_me({centered: true, onLoad: function() { $('#sign_up').find('input:first').focus()}});}
+        $('#try-1, #try-2, #login-invok,#radio11,#radio22,#radio33').click(function() {
+        $("#sign_up").lightbox_me({centered: true, onLoad: function() {
+        $("#sign_up").find("input:first").focus();
+        $('body').css('overflow','hidden');
+        }});
+        e.preventDefault();
+    });
+});
+$(function() {
+    $('#sign_up .loginSignArea div').hide();
+    $('#sign_up .loginSignArea div:first').show();
+    $('#sign_up .loginSignArea ul li:first').addClass('active');
+    $('#sign_upTabs a').click(function(){
+        $('#sign_up .loginSignArea ul li').removeClass('active');
+        $(this).parent().addClass('active');
+        var currentTab = $(this).attr('href');
+        $('#sign_up .loginSignArea div').hide();
+        $(currentTab).show();
+        return false;
+    });
+    $('.fg').click(function(){
+        $('#sign_upTabs').hide();
+    });
+    $('.loginshow').click(function(){ 
+        $('#sign_upTabs').show();
+        $('#sign_up .loginSignArea div').hide();
+        $('#sign_up .loginSignArea div:first').show();
+        $('#sign_up .loginSignArea ul li').removeClass('active');
+        $('#sign_up .loginSignArea ul li:first').addClass('active');
+    });
+});
+
+
+
+/*resetPassword*/
+$(function() {function launch() {
+    $('#resetPassword').lightbox_me({centered: true, onLoad: function() { $('#resetPassword').find('input:first').focus()}});}
+        $('#resetPassTab-1').click(function() {
+        $("#resetPassword").lightbox_me({centered: true, onLoad: function() {
+        $("#resetPassword").find("input:first").focus();
+        $('body').css('overflow','hidden');
+        }});
+        e.preventDefault();
+    });
+});
+
+
+/* window Scroll for Social DropDown icon */   
+/*
+$(function(){
+$(window).scroll(function(){
+var scrollNew = $(this).scrollTop();
+if(scrollNew >= 350){
+$('#headerWhite').css('top', '0').slideDown('fast');
+$('a.menu-opener').css('background-position', '-540px -400px');
+}else{
+$('#headerWhite').css('top', '0').slideUp('fast');
+$('a.menu-opener').css('background-position', '-540px -440px');
+}
+});
+});
+*/
+</script><!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="https://cdn.digit.in/bundles/thinkdigitfrontend/css/ie.css?v=82"><![endif]--><!--[if IE]><script type="text/javascript" src="https://cdn.digit.in/bundles/thinkdigitfrontend/js/ie.js?v=82"></script><![endif]--><script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script><script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script><script type='text/javascript'>
+
+    Array.prototype.insert = function(index, item) {
+        this.splice(index, 0, item);
+    };
+    // Function to generate unique names for slots
+    var nextSlotId = 1;
+    var noOfAds = 3;
+   
+    addIds = [
+                         
+                     {"id": "/1042151/DGT_Nonforum_Header_leaderboard", "height": 90, "width": 728},
+                 
+                  {"id": "/1042151/DGT_Nonforum_FirstSquare", "height": 250, "width": 300},
+                {"id": "/1042151/DGT_Nonforum_SecondSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_ThirdSquare", "height": 250, "width": 300},
+                {"id": "/1042151/DGT_Nonforum_fourthSquare", "height": 250, "width": 300},
+                {"id": "/1042151/DGT_Nonforum_fifthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_sixthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_seventhSquare", "height": 250, "width": 300},
+                  
+    ];
+    var siteCapture = {"id": "/1042151/DGT_ROS_sitecapture", "height": 300, "width": 640};
+    var catFishIds = [
+        {"id": "/1042151/DGT_Non_forum_Catfish_Left", "height": 900, "width": 300},
+        {"id": "/1042151/DGT_Non_forum_Catfish_Right", "height": 900, "width": 300}
+    ];
+    var noOfMobileAds = 8;
+    var mobileAddIds = [
+                {"id": "/1042151/DGT_Mobile_site_FirstSquare", "height": 50, "width": 320},
+        {"id": "/1042151/DGT_Mobile_site_SecondSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_thirdsquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_fourthsquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_fifthsquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_sixthsquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_seventhsquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_eighthsquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_ninthhSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_tenthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Mobile_site_eleventhSquare", "height": 250, "width": 300}
+    ];
+    var reviewAddIds = new Array();
+    var noOfContentAds = 5;
+    var contentAddIds = [
+        {"id": "/1042151/DGT_Nonforum_smallleaderboard_1", "height": 60, "width": 468},
+        {"id": "/1042151/DGT_Nonforum_smallleaderboard_2", "height": 60, "width": 468},
+        {"id": "/1042151/DGT_Nonforum_smallleaderboard_3", "height": 60, "width": 468}
+    ];
+    var noOfSideAds = 30;
+        var sideAddIds = [
+                {"id": "/1042151/DGT_Nonforum_FirstSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_SecondSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_ThirdSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_fourthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_fifthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_sixthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_seventhSquare", "height": 250, "width": 300}, 
+            ];
+        addIds.insert(1, {"id": "/1042151/DGT_Nonforum_fifteenthSquare", "height": 250, "width": 300});
+    addIds.insert(2, {"id": "/1042151/DGT_Nonforum_sixteenthSquare", "height": 250, "width": 300});
+         
+     noOfAds = 1;
+    noOfSideAds = 7;
+    mobileAddIds.splice(0, 1);
+    catFishIds = [
+        {"id": "/1042151/DGT_Home_page_Catfish_Left", "height": 900, "width": 300},
+        {"id": "/1042151/DGT_Home_page_Catfish_Right", "height": 900, "width": 300}
+    ];
+    siteCapture = {"id": "/1042151/DGT_Home_sitecapture", "height": 300, "width": 640};
+                addIds[0] = {"id": "/1042151/DGT_Homepage_Header_leaderboard", "height": 90, "width": 728};
+            //addIds.insert(1, {"id": "/1042151/DGT_Strip_below_article", "height": 250, "width": 992});
+    addIds.insert(1, {"id": "/1042151/DGT_Non_forum_Large_Square", "height": 280, "width": 336});
+    addIds.insert(2, {"id": "/1042151/DGT_Homepage_ThirdSquare", "height": 250, "width": 300});
+     /* code uncomented by Sonam @21/sept/2016  @9/sep/2016 
+    addIds.insert(3, {"id": "/1042151/DGT_Home_reveal_1x1", "height": 700, "width": 1024});
+    addIds.insert(4, {"id": "/1042151/DGT_Homepage_fourthSquare", "height": 250, "width": 300});
+    addIds.insert(5, {"id": "/1042151/DGT_Homepage_fifthSquare", "height": 250, "width": 300});*/
+     /** commented @21/sept/2016*/
+    addIds.insert(3, {"id": "/1042151/DGT_Homepage_fourthSquare", "height": 250, "width": 300});
+    addIds.insert(4, {"id": "/1042151/DGT_Homepage_fifthSquare", "height": 250, "width": 300});
+    // addIds.insert(4, {"id": "/1042151/DGT_Homepage_Slider_box", "height": 410, "width": 310});
+     //console.log(addIds[5].id);
+    sideAddIds = [
+        {"id": "/1042151/DGT_Homepage_FirstSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Homepage_Secondquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Homepage_fourthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_thirteenthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_fourteenthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_fifteenthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_sixteenthSquare", "height": 250, "width": 300},
+        {"id": "/1042151/DGT_Nonforum_seventeenthSquare", "height": 250, "width": 300}
+    ];
+    mobileAddIds[1]= {"id": "/1042151/DGT_Mobile_site_Homepage_FirstSquare", "height": 250, "width": 300};
+    mobileAddIds[2]= {"id": "/1042151/DGT_Mobile_site_Homepage_Secondquare", "height": 250, "width": 300};
+    mobileAddIds[3]= {"id": "/1042151/DGT_Mobile_site_Homepage_ThirdSquare", "height": 250, "width": 300};
+    mobileAddIds[4]= {"id": "/1042151/DGT_Mobile_site_Homepage_fourthSquare", "height": 250, "width": 300};
+    mobileAddIds[5]= {"id": "/1042151/DGT_Mobile_site_Homepage_fifthSquare", "height": 250, "width": 300};
+    mobileAddIds[6]= {"id": "/1042151/DGT_Mobile_site_Nonforum_sixthSquare", "height": 250, "width": 300};
+    mobileAddIds[7]= {"id": "/1042151/DGT_Mobile_site_Nonforum_seventhSquare", "height": 250, "width": 300};
+    mobileAddIds[8]= {"id": "/1042151/DGT_Mobile_site_Nonforum_eighthSquare", "height": 250, "width": 300};
+    
+     
+    function generateNextSlotName() {
+        var id = nextSlotId++;
+        return 'adslot' + id;
+    }
+    var disqus_shortname = 'thinkdigittest';
+   
+    
+
+    function isDesktop() {
+        return !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Function to Check Android and IOS Device
+    function isAndroidIOS() {
+        return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    function isIOS() {
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+    
+ // Function to add content to page, mimics real infinite scroll
+    // but keeps it much simpler from a code perspective.
+    function moreContent(index, t) {
+        //return;
+
+        var adsIdIndex = parseInt(index % 11) * noOfAds;
+       // console.log('index: ' + index + ', arrIndex: ' + adsIdIndex);
+        // _gaq.push(['_trackPageview', document.URL.split("/").slice(3).join("/")]);
+
+
+        try {
+            if (index != 0){
+                var u = document.URL.split("/").slice(3).join("/");
+                                     
+                    ga('send', 'pageview', u);
+                     // Start comScore plugin code
+                    self.COMSCORE && COMSCORE.beacon(
+                        {c1: "2", c2: "9989804"}
+                    );
+                 // Start Quantcast plugin code:removed on 12th july 2018
+               // End Quantcast plugin code
+                // End comScore plugin code
+                 
+             
+
+              
+            }
+        } catch (e) {
+            //console.log('ga is not working.'+e.message);
+        }
+
+
+        //stButtons.makeButtons();        
+        var set = 0;
+        var r = 0;
+        if (index == 0 && typeof t === 'undefined' && isDesktop()) {
+            set = 1;
+            applyAd(index, 'ad', index, addIds);
+        }
+        if (set == 0)
+            r = 1;
+                        if (index != 0)
+            adsIdIndex++;
+        
+
+
+
+        if (isDesktop()) {
+            // alert('desktop');
+            (function myLoop(i) {
+                setTimeout(function() {
+                    if (adsIdIndex < addIds.length && adsIdIndex < $('div.ad').length) {
+                        adsIdIndex++;
+
+                        var classIndex = 0;
+                                        classIndex = (index * noOfAds) + i + r;
+                        //  $('div.ad:eq('+((index*noOfAds)+i+r)+')').append(slotDiv);
+                
+                        applyAd(classIndex, 'ad', adsIdIndex, addIds);
+                        //console.log(adsIdIndex);
+
+
+                    }          //  your code here                
+                    if (i++ <= noOfAds + set)
+                        myLoop(i);      //  decrement i and call myLoop again if i > 0
+                }, 2000)
+            })(1);
+            var contentAdFlag = 0;
+            if (contentAddIds !== null) {
+                if (index == 0 && $('div.content-ad').length == 0) {
+                    contentAdFlag = -1;
+                    noOfContentAds = 2;
+                }
+                else
+                    moreAdContent(parseInt(index) + contentAdFlag);
+
+            }
+            if (sideAddIds !== null && index < sideAddIds.length)
+                moreSideAd(index);
+            //if(reviewAddIds.length !== 0 && $('div.review-ad').length > 0)reviewAd();
+        } else {
+
+            var mobileIndex = 0;
+
+                        mobileIndex = 0;
+                        var emptyDivs = $('div.ad_slots_mobShowOthHide:empty').length;
+            var len = $('div.ad_slots_mobShowOthHide').length;
+            var classIndex = len - emptyDivs;
+
+            for (var i = classIndex; i < classIndex + 8 && i < len; i++)
+                applyAd(i, 'ad_slots_mobShowOthHide', i + mobileIndex, mobileAddIds);
+
+
+        }
+
+
+
+
+
+
+
+        // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        // some code..
+        // }
+
+        //mobileAd();
+    }
+
+
+
+    // Function to add content to page, mimics real infinite scroll
+    // but keeps it much simpler from a code perspective.
+    function moreAdContent(index) {
+
+
+        var set = 0,
+                r = 0;
+        if (index == 0) {
+            set = 1;
+            r = 0;
+        } else
+        {
+            set = 0;
+            r = 1;
+        }
+        
+        
+
+             set = 0;
+        r = 0;
+           
+                     var contentAdLength = $('div.content-ad').length;
+            var contenIdLength = contentAddIds.length;
+        for (var i = 0; i < noOfContentAds + set; i++) {
+            var myIndex = ((index * noOfContentAds) + i + r);
+            var arrIndex = ((index * noOfContentAds) + i) % 3;
+
+            if (arrIndex < contenIdLength && myIndex < contentAdLength)
+                applyAd(myIndex, 'content-ad', arrIndex, contentAddIds);
+                //console.log(contentAddIds);
+
+
+
+        }
+  
+       
+    }
+    // Function to add content to page, mimics real infinite scroll
+   // but keeps it much simpler from a code perspective.
+   function moreSideAd(index) {
+       var sideIdLength = sideAddIds.length;
+       var sideAdLength = $('div.side-ad').length;
+       for (var i = 1; i <= noOfSideAds; i++) {
+            var myIndex = ((index * noOfSideAds) + i - 1);
+            //if (myIndex < sideIdLength && myIndex < sideAdLength){
+                // if(isDesktop && sideAddIds[myIndex].id === '/1042151/DGT_large_square_300x600'){
+                //     sideAddIds[myIndex].id = '/1042151/DGT_mobilephone_300x600';
+                // }
+                if (myIndex >= noOfSideAds) {
+                    myIndex1 = myIndex - (noOfSideAds * index);
+                }else{
+                    myIndex1 = myIndex;
+                }
+                //console.log('myIndex=' + myIndex,'myIndex1=' + myIndex1);
+                applyAd(myIndex, 'side-ad', myIndex1, sideAddIds);
+            //}
+             
+        }
+
+   }
+ 
+    function reviewAd() {
+
+        applyAd(0, 'review-ad', 0, reviewAddIds);
+
+    }
+
+    function  mobileAd()
+    {
+        var mobileIdLength = mobileAddIds.length;
+        var mobileAdLength = $('div.ad_slots_mobShowOthHide').length;
+        for (var i = 0; (i < mobileIdLength && i < mobileAdLength); i++)
+            applyAd(i, 'ad_slots_mobShowOthHide', i, mobileAddIds);
+    }
+
+
+
+    function applyAd(classIndex, myClass, arrIndex, arr,type='')
+    {
+       var id = arr[arrIndex].id; 
+       // console.log(myClass + '(' + classIndex + ')');
+      //  console.log(id);
+        var width = arr[arrIndex].width;
+        var height = arr[arrIndex].height;
+        var slotDiv = document.createElement('div');
+        var slotName = generateNextSlotName();
+        slotDiv.id = slotName;
+        if (width == 728 && isDesktop()) {
+         //   slotDiv.setAttribute('class', 'iFrameHeight');
+            //slotDiv.setAttribute('align', 'left');
+        }
+        var Jobj = $('div.' + myClass + ':eq(' + classIndex + ')');
+        if (Jobj.children().length == 0) {
+            Jobj.html(slotDiv);
+            
+            if(myClass == 'newSlideAd'){
+                //console.log(Jobj.attr('id'));
+                if(Jobj.attr('id') == 'slideAd1'){
+                        id = '/1042151/DGT_Mobile_site_Slider_Square_Fifth';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'slideAd2'){
+                        id = '/1042151/DGT_Mobile_site_Slider_Square_First';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'slideAd3'){
+                        id = '/1042151/DGT_Mobile_site_Slider_Square_Fourth';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'slideAd4'){
+                        id = '/1042151/DGT_Mobile_site_Slider_Square_Third';
+                        height=250;
+                        width =300;
+                 }
+            }
+
+            //disable float fixed ad
+            if(myClass == 'side-ad'){
+                if(Jobj.attr('id') == 'fix_last_ad')
+                        id = '/1042151/DGT_fixed_floating_square';
+                    
+                if(Jobj.attr('id') == 'Deewali_first_square')
+                        id = '/1042151/DGT_buying_guide_first_square';
+                    
+                if(Jobj.attr('id') == 'Deewali_second_square')
+                        id = '/1042151/DGT_buying_guide_second_square';
+                
+                if(Jobj.attr('id') == 'rectAd'){
+                    id = '/1042151/DGT_Nonforum_right_Recatnage_Ad';
+                    width=300;
+                    height=180;
+                 }
+                 if(Jobj.attr('id') == '31_id'){
+                        id = '/1042151/DGT_Nonforum_thirtyoneSquare';
+                        height=250;
+                        width =300;
+                 }
+                  else if(Jobj.attr('id') == '7_id'){
+                        id = '/1042151/DGT_Nonforum_seventhSquare';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == '32_id'){
+                        id = '/1042151/DGT_Nonforum_thirtytwoSquare';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == '30_id'){
+                        id = '/1042151/DGT_Nonforum_thirtySquare';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'bfrcenter'){
+                        id = '/1042151/DGT_Resource_center_300x150';
+                        height=150;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == '28_ads'){
+                        id = '/1042151/DGT_Nonforum_twentyeighthSquare';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == '29_ads'){
+                        id = '/1042151/DGT_Nonforum_twentyninethSquare';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == '4_ads'){
+                        id = '/1042151/DGT_Mobile_phone_fourthSquare';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == '50_ads'){
+                        id = '/1042151/DGT_Most_popularSection_inner_300x180';
+                        height=200;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'aboveSponser'){
+                        id = '/1042151/Dgt_most_popular_first_story_300x100';
+                        height=100;
+                        width =300;
+                 }
+                 
+                 else if(Jobj.attr('id') == 'mobSec'){
+                        id = '/1042151/Dgt_top10_mobile_second_square';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'lapSec'){
+                        id = '/1042151/Dgt_top10_laptop_second_square';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'tabSec'){
+                        id = '/1042151/Dgt_top10_tablet_second_square';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'mobfst'){
+                                                    id = '/1042151/DGT_Top10_Mobile_FirstSquare';
+                            height=250;
+                            width =300;
+                                                
+                 }
+                 else if(Jobj.attr('id') == 'tabfst'){
+                                                    id = '/1042151/DGT_Top10_Tablet_FirstSquare';
+                            height=250;
+                            width =300;
+                                                                 }
+            }
+            
+             if(myClass == 'ad'){
+                if(Jobj.attr('id') == 'hindiAds'){
+                        id = '/1042151/DGT_right_rectange_250x90';
+                        height=90;
+                        width =250;
+                 }
+                 else if(Jobj.attr('id') == 'mobLeader'){
+
+                                            id = '/1042151/DGT_Top10_Mobile_headerleaderboard';
+                        height=90;
+                        width =728;
+                    
+                                     }
+                 else if(Jobj.attr('id') == 'tabLeader'){
+
+                                           id = '/1042151/DGT_Top10_Tablet_headerleaderboard';
+                       height=90;
+                       width =728;
+                                        
+                                     }
+            }
+            if(myClass == 'content-ad'){
+                 if(Jobj.attr('id') == 'inDeskArticle'){
+                        id = '/1042151/DGT_inarticle_desktop_1pxcode';
+                        height=1;
+                        width =1;
+                 }
+            }
+            
+            if(myClass == 'ad_slots_mobShowOthHide'){
+               
+                if(Jobj.attr('id') == '/1042151/DGT_Mobile_site_Gaming_Header_leaderboard'){
+                    id = '/1042151/DGT_Mobile_site_Gaming_Header_leaderboard';
+                    width=320;
+                    height=50;
+                 }
+                else if(Jobj.attr('id') == '/1042151/DGT_Mobile_site_Apps_Header_leaderboard'){
+                    id = '/1042151/DGT_Mobile_site_Apps_Header_leaderboard';
+                    width=320;
+                    height=50;
+                 }
+                 else if(Jobj.attr('id') == '/1042151/DGT_Mobile_site_Cameras_Header_leaderboard'){
+                    id = '/1042151/DGT_Mobile_site_Cameras_Header_leaderboard';
+                    width=320;
+                    height=50;
+                 }
+                 else if(Jobj.attr('id') == '/1042151/DGT_Mobile_site_General_Header_leaderboard'){
+                    id = '/1042151/DGT_Mobile_site_General_Header_leaderboard';
+                    width=320;
+                    height=50;
+                 }
+                 else if(Jobj.attr('id') == 'inMobArticle'){
+                    id = '/1042151/DGT_inarticle_mb_1pxcode';
+                    width=1;
+                    height=1;
+                 }
+                                  else if(Jobj.attr('id') == 'largAds'){
+                    id = '/1042151/DGT_Mobile_site_300x600_half_page';
+                    width=300;
+                    height=600;
+                 }
+                                  
+                 
+             }
+
+            /********For single page slideshow*******/
+            
+            if(myClass == 'newSlideAdMob'){
+               // console.log(Jobj.attr('id'));
+                if(Jobj.attr('id') == 'mobslideAd1'){
+                                                id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square1';
+                                                height=250;
+                        width =300;
+                 }
+                 
+                                  else if(Jobj.attr('id') == 'mobslideAd2'){
+                        id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square2';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'mobslideAd3'){
+                        id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square3';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'mobslideAd4'){
+                        id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square4';
+                        height=250;
+                        width =300;
+                 }
+                 else if(Jobj.attr('id') == 'mobslideAd5'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square5';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd6'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square6';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd7'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square7';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd8'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square8';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd9'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square9';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd10'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square10';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd11'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square11';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd12'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square12';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd13'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square13';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd14'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square14';
+                     height=250;
+                     width =300;
+              }
+               else if(Jobj.attr('id') == 'mobslideAd15'){
+                     id = '/1042151/DGT_Mobile_site_Slideshow_singlepage_square15';
+                     height=250;
+                     width =300;
+              }
+                          }
+           
+           
+            googletag.cmd.push(function() {
+                var slot = googletag.defineSlot(id, [width, height], slotName).
+                        setTargeting("test", "infinitescroll").
+                        addService(googletag.pubads());
+
+                // Infinite scroll requires SRA
+                
+
+                // Disable initial load, we will use refresh() to fetch ads.
+                // Calling this function means that display() calls just
+                // register the slot as ready, but do not fetch ads for it.
+                googletag.pubads().disableInitialLoad();
+                googletag.pubads().collapseEmptyDivs(true);
+                
+                // Enable services
+                googletag.enableServices();
+                // add script code
+                
+
+                // Display has to be called before
+                // refresh and after the slot div is in the page.
+                googletag.display(slotName);
+                googletag.pubads().refresh([slot]);
+            });
+        }
+    }
+
+    function adCatFish(arr, i) {
+
+        // console.log(myClass+'('+classIndex+')');
+        // console.log(id);
+        $('.catfish_ad').css('display', 'block');
+        $('.main-area').addClass('catfish_spcae');
+
+
+
+        var id = arr[i].id;
+        var width = arr[i].width;
+        var height = arr[i].height;
+        // alert(id);
+        var slotDiv = document.createElement('div');
+        var slotName = generateNextSlotName();
+        slotDiv.id = slotName;
+        var myClass = (i == 0 ? 'left_catfish_ad' : 'right_catfish_ad')
+        $('div.' + myClass).append(slotDiv);
+        googletag.cmd.push(function() {
+            var slot = googletag.defineSlot(id, [width, height], slotName).
+                    setTargeting("test", "infinitescroll").
+                    addService(googletag.pubads());
+
+            // Infinite scroll requires SRA
+            
+
+            // Disable initial load, we will use refresh() to fetch ads.
+            // Calling this function means that display() calls just
+            // register the slot as ready, but do not fetch ads for it.
+            googletag.pubads().disableInitialLoad();
+            googletag.pubads().collapseEmptyDivs(true);
+            
+
+            // Enable services
+            googletag.enableServices();
+
+            // Display has to be called before
+            // refresh and after the slot div is in the page.
+            googletag.display(slotName);
+            googletag.pubads().refresh([slot]);
+        });
+
+
+
+    }
+
+
+    function adSiteCapture(obj) {
+
+       
+
+        var id = obj.id;
+        var width = obj.width;
+        var height = obj.height;
+
+        //alert(id);
+        var slotDiv = document.createElement('div');
+        var slotName = generateNextSlotName();
+        slotDiv.id = slotName;
+        var myClass = 'pageLoadAdBoxIn';
+        $('div.' + myClass).append(slotDiv);
+        googletag.cmd.push(function() {
+            var slot = googletag.defineSlot(id, [width, height], slotName).
+                    setTargeting("test", "infinitescroll").
+                    addService(googletag.pubads());
+
+        console.log(slot);    
+        // Infinite scroll requires SRA
+            
+
+            // Disable initial load, we will use refresh() to fetch ads.
+            // Calling this function means that display() calls just
+            // register the slot as ready, but do not fetch ads for it.
+            googletag.pubads().disableInitialLoad();
+            googletag.pubads().collapseEmptyDivs(true);
+            
+
+            // Enable services
+            googletag.enableServices();
+
+            // Display has to be called before
+            // refresh and after the slot div is in the page.
+            googletag.display(slotName);
+            googletag.pubads().refresh([slot]);
+        });
+    }
+    $(document).ready(function() {
+        var siteCaptureFlag = false;
+        
+        if (isDesktop()) {
+            
+            var stripobj = {"id": "/1042151/DGT_Strip_below_article", "height": 250, "width": 992};
+            var stripobjSearch = {"id": "/1042151/DGT_strip_ad_search_page", "height": 250, "width": 992};
+            var stripobjAskUs = {"id": "/1042151/DGT_strip_ad_askus_page", "height": 250, "width": 992};
+            var stripobjTop10 = {"id": "/1042151/DGT_strip_ad_top10_page", "height": 250, "width": 992};
+            var stripobjSlide = {"id": "/1042151/DGT_strip_ad_slideshow_page", "height": 250, "width": 992};
+            var stripobjMobile = {"id": "/1042151/DGT_strip_ad_mobile_section", "height": 250, "width": 992};
+            var stripobjLaptop = {"id": "/1042151/DGT_strip_ad_laptop_section", "height": 250, "width": 992};
+            
+            var belowArticleobj = {"id": "/1042151/DGT_Nonforum_smallleaderboard_below_article", "height": 60, "width": 468};
+            var belowArticleobj2 = {"id": "/1042151/DGT_Below_Article_content_syndication_656x100", "height": 100, "width": 656};
+            //adStrips(stripobj, 'stripAd');
+            
+            //comment above sdsStrip function and Add condition for home page
+                                     
+
+                             
+             
+            
+    
+              
+                        
+                                    
+                
+                
+            
+        }else{
+            
+            
+               
+          
+     
+        // Start footer Ad for mobile
+                    var arr = [
+     {"id": "/1042151/DGT_Mobile_site_footer_leaderboard", "height": 50, "width": 320}
+                      ];
+                   
+            $('div.main-holder').prepend('<div class="footerCatfishAdArea"><div class="footerCatfish"><span class="footerButton">Close</span><div class="footerAd"></div></div></div>');
+            $('.footerCatfishAdArea .footerButton').click(function(){
+                $('.footerCatfishAdArea').fadeOut(function(){
+                    $(this).remove();
+                });
+            });
+            applyAd(0, 'footerAd', 0, arr);
+                            // End footer Ad for mobile
+    }
+
+
+        // Hide catfish close button
+
+        //$('.catfish_Close').hide();
+        setTimeout(function() {
+            moreContent(0);
+        }, 1000);
+
+        
+        
+            
+        //this works on desktops only platforms 
+          
+
+    });
+   
+   
+
+     
+     function showSiteCapture(){        
+        adSiteCapture(siteCapture);
+        if(isAndroidIOS() ){
+             setTimeout(function(){ 
+                 $('.pageLoadAdBox').show();
+             }, 0);                     
+            setTimeout(function(){ 
+                $('.pageLoadAdBox').fadeOut(200); 
+            }, 10000);                
+        }
+        else { 
+                                
+                setTimeout(function(){ 
+                    $('.pageLoadAdBox').show();
+                }, 0);
+                 
+                setTimeout(function(){ 
+                    $('.pageLoadAdBox').fadeOut(200); 
+                }, 20000);
+                    }   
+        
+    }
+
+
+    function adStrips(stripobj, myClass) {
+
+        var id = stripobj.id;
+        var width = stripobj.width;
+        var height = stripobj.height;
+
+        // alert(id);
+        var slotDiv = document.createElement('div');
+        var slotName = generateNextSlotName();
+        slotDiv.id = slotName;
+        // var myClass = 'stripAd';
+        $('div.' + myClass).append(slotDiv);
+        googletag.cmd.push(function() {
+            var slot = googletag.defineSlot(id, [width, height], slotName).
+                    setTargeting("test", "infinitescroll").
+                    addService(googletag.pubads());
+
+            // Infinite scroll requires SRA
+            googletag.pubads().enableSingleRequest();
+       
+            
+
+
+
+
+            // Disable initial load, we will use refresh() to fetch ads.
+            // Calling this function means that display() calls just
+            // register the slot as ready, but do not fetch ads for it.
+            googletag.pubads().disableInitialLoad();
+            googletag.pubads().collapseEmptyDivs(true);
+            
+
+            // Enable services
+            googletag.enableServices();
+
+            // Display has to be called before
+            // refresh and after the slot div is in the page.
+            googletag.display(slotName);
+            googletag.pubads().refresh([slot]);
+        });
+    }
+  
+
+
+// @Author UI/UX Design Nazakat Ali nazakat.ali05@gmail.com
+// To float fixed ad at the top
+$(function() {
+    if ( $("#fix_last_ad").length ) {
+        var lastScrollTop = 0;
+        var fixingAd = $("#fix_last_ad" );
+        $(window).scroll(function() {
+            var fixedAdAside = $('aside').height()+$('aside').offset().top;
+            fixingAd.css({'position': 'relative', 'top':'10px'});
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop){
+                // downscroll code
+                if ($(window).scrollTop() > (fixedAdAside-300)) {
+                    if (fixingAd.attr('data-topPxs')) {
+                        fixingAd.css({'position': 'fixed', 'top': fixingAd.attr('data-topPxs')+'px'});
+                    }else{
+                        fixingAd.css({'position': 'fixed', 'top': '80px'});
+                    }
+                }
+            } else {
+                // upscroll code
+                if ($(window).scrollTop() > (fixedAdAside)) {
+                    if (fixingAd.attr('data-topPxs')) {
+                        fixingAd.css({'position': 'fixed', 'top': fixingAd.attr('data-topPxs')+'px'});
+                    } else {
+                        fixingAd.css({'position': 'fixed', 'top': '80px'});
+                    }
+                }
+            }
+            lastScrollTop = st;
+        });
+    }  
+})
+       function showSiteCaptureMobileHome(){
+        adSiteCapture(siteCapture);
+        if(isAndroidIOS() ){
+             /*setTimeout(function(){ 
+             $('.pageLoadAdBox').show();
+         }, 3000);*/
+            $('.pageLoadAdBox').show();
+             
+              setTimeout(function(){ 
+                $('.pageLoadAdBox').fadeOut(200); 
+                }, 20000);
+        }
+    }
+</script><script type='text/javascript'>var _sf_startpt=(new Date()).getTime();document.domain = 'digit.in'; </script></head><body><!-- wrapper --><div id="wrapper"><div class="w1"><div class="mobile-nav" id="mobile-nav"><ul class="socials"></ul><ul class="nav"><li style="background:#fff;"><a href="/contest/" style="color: #333;font-size: 14.5px;">IBM Cloud private quiz <img alt ="IBM Cloud private quiz|Digit.in" src="https://static.digit.in/default/22e5964a273f6dd892610de7a8b0a905e20bb828.gif" style="margin-left: 7px;
+    top: -2px;position: relative;" /></a></li><li class="active"><a href="/hotdeal/" >Hot Deals</a></li><li><a href="/apps/">Apps</a><li class="active"><a href="/car-tech/">Auto Tech</a></li><li><a href="/mobile-phones/">Mobiles</a></li><li><a href="/internet/">Internet</a></li><!-- <li><a href="#">Mobile Accessories</a></li> --><li><a href="/laptops/">Laptops</a></li><li><a href="https://www.digit.in/microsites/honor-zone.html" style="background:#dde123" target="_blank" rel="noreferrer">Honor Zone</a></li><!-- <li><a href="/tv-reviews/">TV</a></li> --><!-- <li><a href="/appliances">Home Appliances</a></li> --><li><a href="/how-to/">How-To</a></li><li><a href="/opinions/">Opinions</a></li><li><a href="/agent001/" target= "_blank" style="background: #e72558; color: #fff !important;" rel="noreferrer">एजेंट 001</a></li><li><a href="https://geek.digit.in/community/" target= "_blank" rel="noreferrer">Forum</a></li><li><a href="https://skoar.digit.in/" target= "_blank" rel="noreferrer">SKOAR</a></li><li><a href="/ask-digit/">Ask Digit</a></li><li><a href="/slideshows/">Photos</a></li><li><a href="/entertainment/">Entertainment</a></li><li><a href="/videos/">Videos</a></li><li><a href="/press-release/">News Releases</a></li><li><a href="https://store.digit.in/subscribe/" target= "_blank" rel="noreferrer">Subscribe</a></li><li><a href="/about-us/#AdvertiseWithUs" >Advertise</a></li></ul></div><!-- header --><header id="header"><script>
+    function logout() {
+        window.location.href = "https://www.google.co.in";
+        window.location.reload();
+        return true;
+    }
+</script><div class="header-holder"><!-- for BTS --><a href="https://www.digit.in/microsites/back-to-college-2018/" target="_blank" rel="noreferrer"><div class="cashify-holder"><div class="left-mwc"><span><img src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/backto.png?v=82" alt="back to college|Digit.in"></span><p><b>Click Here For The<br/>Best Laptop Buying Advice</b>!</p></div><div class="right-mwc"><p>Powered By</p><img src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/lenovo.png?v=82" alt="Lenovo|Digit.in"></div></div></a><style>
+    @media only screen and (min-width: 0px) and (max-width: 600px) {
+
+/* BTS start mobile version */
+.cashify-holder {
+    width: 100%;
+    float: left;
+    color: #fff;
+    background:url(https://static.digit.in/default/7adb1ec4f73ca73c16570341a3328aaec1f12870.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 999999;
+}   
+.left-mwc{
+    width: 100%;
+    margin:0px 0 0 0;
+    float: left;   
+}
+.left-mwc span {
+     margin: 0 5px 0 0;
+    float: left;
+    width: 151px;
+}
+.left-mwc span img{
+  width:100%;
+ }
+ 
+.left-mwc p {
+    width: auto;
+    float: left;
+    margin: 6px 0 3px 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+}
+.right-mwc {
+    width: auto;
+    float: left;
+    margin: 9px 0 0 14px;
+    background: none;
+    padding: 3px 0 3px 6px;
+}
+.right-mwc p {
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 3px 8px 1px 0;
+}
+.right-mwc img {
+    float: right;
+    margin: 0px 0 0 0;
+    width: 55px;
+}
+    }
+    </style><!-- BTS end --><a class="menu-opener" href="#mobile-nav">Menu</a><p class="logo forOverviewLogo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><a href="/"><img src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/logo.png?v=82" alt="Latest Tech News: Digit.in" title="digit" /><meta itemprop="url" content="https://cdn.digit.in/bundles/thinkdigitfrontend/images/logo.png?v=82"><meta itemprop="width" content="60"><meta itemprop="height" content="26"></a></p><nav id="nav"><ul><li><a href="/top-products/">Top10</a></li><li><a href="/review/">Reviews</a></li><li><a href="/technology-news/">News & Launches</a></li><li class="topNavDrop"><a href="/features/">In Depth</a><div class="tnd_menu"><ul class="tnd_menu_List"><li><a href="/opinions/">Opinions</a></li></ul></div></li><!--  <li><a href="/how-to/">How-To</a></li> --><li><a href="https://devworx.digit.in/" target="_blank" rel="noreferrer">Devworx</a></li><li><a href="https://geek.digit.in/community/" target="_blank" rel="noreferrer">Forum</a></li><li><a href="https://skoar.digit.in/" target="_blank" rel="noreferrer">SKOAR</a></li><li class="active hotDeals"><a href="/hotdeal/">Hot Deals</a></li></ul></nav><div id="sub_header"><div class="header-holder_new"><ul class="sub_menu"></li><li class="dropm" ><a href="/mobile-phones/">Mobiles</a><ul class="dropmList"><li><a href="/latest-mobile-phones/">Help Me Buy</a></ul></li></li><li><a href="/laptops/">Laptops</a></li><!--               <li><a href="/audio-video/">Audio</a></li> --><li ><a style="background: #e72558; color: #fff !important;" href="/car-tech/">Auto Tech</a></li><li><a href="/internet/">Internet</a></li><li><a href="/slideshows/">Photos</a><li><a href="/entertainment/">Entertainment</a></li><li><a href="/videos/">Videos</a></li><li><a href="/contest/">Contests <img src="https://static.digit.in/default/22e5964a273f6dd892610de7a8b0a905e20bb828.gif" alt ="Contests|Digit.in"/></a></li><li><a href="/press-release/">News Releases</a></li><li><a href="/agent001/" target= "_blank" style="background: #e72558; color: #fff !important;" rel="noreferrer">एजेंट 001</a></li><li class="dropm" ><a href="#">Buy Digit</a><ul class="dropmList"><li><a href="https://store.digit.in/subscribe/" target="_blank" rel="noreferrer">Subscribe</a></li><li><a href="https://store.digit.in/store/" target="_blank" rel="noreferrer">Current/ past issue</a></li></ul></li><li><a href="https://www.digit.in/microsites/honor-zone.html" style="background:#dde123" target="_blank" rel="noreferrer">Honor Zone</a></li><!-- <li><a href="/hubs/mwc-2016/" style="background: #4973bd; /* Old browsers */ background: -moz-linear-gradient(-45deg, #4973bd 0%, #00598a 30%, #67b08e 70%, #cbe40f 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(-45deg, #4973bd 0%,#00598a 30%,#67b08e 70%,#cbe40f 100%); /* Chrome10-25,Safari5.1-6 */background: linear-gradient(135deg, #4973bd 0%,#00598a 30%,#67b08e 70%,#cbe40f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4973bd', endColorstr='#cbe40f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ color:#fff !important"><b>mwc 2016</b></a></li> --><!-- <li><a href="/tv-reviews/">TV</a></li> --><!--li class="dropm" ><a href="#">MENU</a><ul class="dropmList"><li><a href="#" target="_blank">MENU-1</a></li><li><a href="#" target="_blank">MENU-2</a></li></ul></li--></ul></div></div><!--end sub_header--><div class="search_outer"><button class="search_icon">Search</button><form action="/search/" method="" id="topSearchForm"><div id="search_field" class="autoSuggest"><div><button class="search_icon1" id="submit">Search</button><input name="keyword" class="searchEle TopSearchNewText" type="text" onkeyup="search_function(this.value);" placeholder="What are you searching for?" autocomplete="off"></div><span class="close">close</span><div class="searchList"><ul class="searchListUl"></ul></div></div></form></div><!--end search_outer--><div class="language"><ul class="language_ul"><li class="droplang"><a href="javascript:void(0);" class="langDrop" ><div id="marquee1" class="container-marquee"><div style="position: absolute;">&nbsp;A&nbsp;क&nbsp;అ &nbsp;</div></div></a><ul class="language_ul_drop"><li onclick="navGacall_lang('language', 'Hindi');"><a href="/hi" ><span>हिंदी</span></a></li><li onclick="navGacall_lang('language', 'Telugu');"><a href="/te" ><span>తెలుగు</span></a></li><li onclick="navGacall_lang('language', 'Marathi');"><a href="/mr" ><span>मराठी</span></a></li><li onclick="navGacall_lang('language', 'Malayalam');"><a href="/ml" ><span>മലയാളം</span></a></li><li onclick="navGacall_lang('language', 'Tamil');"><a href="/ta" ><span>தமிழ்</span></a></li><li onclick="navGacall_lang('language', 'Bhojpuri');"><a href="/bh" ><span>भोजपुरी</span></a></li><li onclick="navGacall_lang('language', 'Bengali');"><a href="/bn" ><span>বাংলা</span></a></li><li onclick="navGacall_lang('language', 'Panjabi');"><a href="/pa" ><span>ਪੰਜਾਬੀ</span></a></li><li onclick="navGacall_lang('language', 'Oriya');"><a href="/or" ><span>ଓଡିଆ</span></a></li><li onclick="navGacall_lang('language', 'Gujarati');"><a href="/gu" ><span>ગુજરાતી</span></a></li><li onclick="navGacall_lang('language', 'Kannada');"><a href="/kn" ><span>ಕನ್ನಡ</span></a></li><li onclick="navGacall_lang('language', 'Assamese');"><a href="/asm" ><span>অসমীয়া</span></a></li><li onclick="navGacall_lang('language', 'Urdu');"><a href="/ur" ><span>اردو</span></a></li></ul></li></ul><div class="showLangMask" ></div></div><!--end language--><span class="now_offer">Languages:</span><div class="top-login"><div class="holder"><a onclick="navGacall_lang('nav','profile');" id="try-2" class="try icon" href="#">Profile</a></div></div><div id="sign_up"><div class="loginSignArea"><div id="tab-1" class="login_form"><script type="text/javascript">
+    $(function ()
+    {
+        $('#form-login').submit(function (e) {
+            e.preventDefault();
+
+            var $this = $(e.currentTarget),
+                inputs = {};
+
+            // Send all form's inputs
+            $.each($this.find('input'), function (i, item) {
+                var $item = $(item);
+                inputs[$item.attr('name')] = $item.val();
+            });
+            // Send form into ajax
+            $.ajax({
+                url: $this.attr('action'),
+                type: 'POST',
+                dataType: 'json',
+                global:false,
+                cache:false,
+                data: inputs,
+                success: function (data) {
+                    if (data.success) {
+						window.location='https://www.digit.in'+window.location.pathname;
+						//window.location.reload();
+					}
+                    else {
+                    //alert(1);
+						$('#username').addClass('boxred');
+						$('#password').addClass('boxred');
+						$('#divError').html('Please  Enter Correct Username/Password');
+                    }
+                }
+            });
+        });
+    });
+</script><form id="form-login" action="/login_check" method="post" ><script>
+    function putUrl(redirecturl) {
+        var route = '/set_url'; 
+        var url1 = document.URL.replace('&amp;', '&');
+        $.ajax
+                ({
+                    type: "POST",
+                    url: route,
+                    data: {"url": url1},
+                    cache: false,
+                    success: function(html)
+                    {
+                        window.location.href = redirecturl;
+                    },
+                    error: function(html) {
+                        //alert('rr');
+                    }
+                });
+        return false;
+    }
+</script><label><!-- twitter commented by himanshi for user review --><ul class="ulSocialLogin"><li class="loginWith">Login With</li><li class="facebookLogin"><a href="#" onclick="return putUrl('https://www.digit.in/login/facebook')"><img src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/facebook_login.jpg?v=82" /></a></li><li class="googleLogin"><a href="#" onclick="return putUrl('https://www.digit.in/login/google')"><img src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/google_login.jpg?v=82" /></a></li></ul></label><!-- custom login commented by himanshi for user review module --><input type="hidden" name="_csrf_token" value="532d75ec48689ece9a4cb281f1ae423f0f642172"></form></div><a href="" class="close closePopup"></a></div></div><!--end login --><!-- <div class="top-search"><form class="TopSearchNew" action="/search/"><input type="text" name="keyword" id="searchEle" placeholder="Search!" class="TopSearchNewText" onclick="navGacall_lang('nav', 'search');" /><input type="submit" id="submit" value="" class="TopSearchNewSubmit" /></form></div> --><!--end top-search --><div class="top-search" id="top_search"><form class="TopSearchNew autoSuggest" action="/search/" ><input type="text" name="keyword" placeholder="Search!" class="TopSearchNewText searchEle" onkeyup="search_function(this.value);" autocomplete="off" /><input type="submit" value="" class="TopSearchNewSubmit" /><div class="searchList"><ul class="searchListUl"></ul></div></form></div><!--end top-search --></div><style type="text/css">
+    @media only screen and (max-width: 480px) {
+        .directLink_ul li a {
+            font-size: 0.75em !important;
+        }
+    }
+</style></header></div><div class="trophy_section"></div><!-- main --><div id="main"><!-- top promotion --><div class="top-promo" style="z-index:0;"><!-- promotion navigation --><!-- advertising --><div class="ad desktopAdRemoveInMobile topProm"></div><!-- <div class="ad desktopAdRemoveInMobile" id="hindiAds" ></div> --><a href="https://www.digit.in/paytm/tracker/paytmmall-top-banner-tuesday-tech-2569" target="_blank" class="smallAd" rel="noreferrer"><img src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/none.gif?v=82"  data-src="https://static.digit.in/default/10678243797896e8e0790a0b6501338b05da1be3.jpeg" /></a><!-- /1042151/DGT_right_rectange_250x90 --></div><div class="main-holder directLinkHome"><div class="main-area default"><script>
+$(document).ready(function() {
+	var owl = $("#owl-demo");
+		owl.owlCarousel({
+			itemsCustom : [[0, 1], [480, 2], [600, 2], [700, 2], [1000, 3], [1200, 4], [1400, 4], [1600, 4] ], navigation : true});
+	var highestBox = 0;
+        $('.owl-carousel .txt_Ali').each(function(){  
+                if($(this).height() > highestBox){  
+                highestBox = $(this).height();  
+        }
+    });    
+    $('.owl-carousel .txt_Ali').height(highestBox);
+});
+</script>
+
+<div id="owl-demo" class="owl-carousel">
+                                                                    
+
+                
+
+                                    
+            <div class="slide_Ali">
+                <div class="box_Ali type1">
+                    <div class="visual_Ali">
+                        <a href="https://www.digit.in/laptops/asus-rog-strix-scar-ii-gl504-review-136009.html">
+                                                                                                                                
+                             <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115343_default_td_600.jpeg" alt="ASUS ROG STRIX SCAR II GL504" title="ASUS ROG STRIX SCAR II GL504">   
+                                                                                                    <span class="shadow"></span>
+                        </a>
+                    </div>
+                    <div class="txt_Ali">
+			<a class="tag_Ali tag_Ali2" href="javascript:void(0)">
+			    							Review
+			    			</a>
+                        <h2><a href="https://www.digit.in/laptops/asus-rog-strix-scar-ii-gl504-review-136009.html">ASUS ROG STRIX SCAR II GL504</a></h2>
+                        <div class="author_Ali">By Mithun Mohandas</div>
+                    </div>
+                </div>
+            </div>
+                                                                    
+
+                
+
+                                    
+            <div class="slide_Ali">
+                <div class="box_Ali type2">
+                    <div class="visual_Ali">
+                        <a href="https://www.digit.in/digital-cameras/canon-eos-1300d-review-136051.html">
+                                                                                                                                
+                             <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115433_default_td_600.jpeg" alt="Canon EOS 3000D" title="Canon EOS 3000D">   
+                                                                                                    <span class="shadow"></span>
+                        </a>
+                    </div>
+                    <div class="txt_Ali">
+			<a class="tag_Ali tag_Ali2" href="javascript:void(0)">
+			    							Review
+			    			</a>
+                        <h2><a href="https://www.digit.in/digital-cameras/canon-eos-1300d-review-136051.html">Canon EOS 3000D</a></h2>
+                        <div class="author_Ali">By Swapnil Mathur</div>
+                    </div>
+                </div>
+            </div>
+                                                                    
+
+                
+
+                                    
+            <div class="slide_Ali">
+                <div class="box_Ali type3">
+                    <div class="visual_Ali">
+                        <a href="https://www.digit.in/general/google-turns-20-fun-facts-you-didnt-know-about-your-go-to-problem-solver-43262.html">
+                                                                                                                                
+                             <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115543_default_td_600.jpeg" alt="Google turns 20 today: Fun facts you didn’t know about your go-to problem solver" title="Google turns 20 today: Fun facts you didn’t know about your go-to problem solver">   
+                                                                                                    <span class="shadow"></span>
+                        </a>
+                    </div>
+                    <div class="txt_Ali">
+			<a class="tag_Ali tag_Ali2" href="javascript:void(0)">
+			    							News
+			    			</a>
+                        <h2><a href="https://www.digit.in/general/google-turns-20-fun-facts-you-didnt-know-about-your-go-to-problem-solver-43262.html">Google turns 20 today: Fun facts you didn't know about your go-to...</a></h2>
+                        <div class="author_Ali">By Sourabh Kulesh</div>
+                    </div>
+                </div>
+            </div>
+                                                                    
+
+                
+
+                                    
+            <div class="slide_Ali">
+                <div class="box_Ali type4">
+                    <div class="visual_Ali">
+                        <a href="https://www.digit.in/mobile-phones/10-or-d2-32gb-review-135632.html">
+                                                                                                                                
+                             <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115475_default_td_600.jpeg" alt="10.or D2" title="10.or D2">   
+                                                                                                    <span class="shadow"></span>
+                        </a>
+                    </div>
+                    <div class="txt_Ali">
+			<a class="tag_Ali tag_Ali2" href="javascript:void(0)">
+			    							Review
+			    			</a>
+                        <h2><a href="https://www.digit.in/mobile-phones/10-or-d2-32gb-review-135632.html">10.or D2</a></h2>
+                        <div class="author_Ali">By Sameer Mitha</div>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+
+<!--<div style="width:992px; position: relative; clear: both; height: 250px; margin:0 auto;padding:30px "><div class="ad desktopAdRemoveInMobile"></div><div class="ad_slots_mobShowOthHide"></div></div>--><!-- strips ads start --><div class="stripAd desktopAdRemoveInMobile" style="text-align:center;clear:both;padding-top: 10px;padding-bottom: 10px;"></div><!-- End--><div class="hubsZone"></div>
+
+<div id="commonForm" >
+    <div class="loginSignArea">
+        <div id="askQuestion-1" class="try btn">
+            <form>
+                 <label class="messageText"><center></center></label>
+                            </form>
+        </div>
+
+      
+        <a href="" class="close closePopup"></a>
+    </div>
+</div>
+
+<!-- content -->
+<div id="content">
+    <div class="content-holder ajax-content">
+        <div class="ajax-holder">
+            <!-- articles -->
+            <section class="articles-box">
+                <!-- subscribe form -->
+                <form class="form-subscribe" action="#" onsubmit="return false;">
+                    <fieldset>
+                        <legend></legend>
+                        <label for="subscribe-email">Subscribe to our newsletter</label>
+                        <div class="text">
+                            <input id="subscribe-email" type="text"  placeholder="Enter your email ID">
+                        </div>
+                        <input type="submit" onclick="subscribeNewsletter('subscribe-email')" value="Submit">
+                    </fieldset>
+                </form>
+                <h2 class="h2_heading">Latest Stories</h2>
+                <div class="columns">
+                    <div class="column1">
+                        
+        <!-- article -->
+    <article class="article">
+        <div class="tag">News</div>
+	        <div class="visual-holder">
+                <div class="visual">
+                    <a href="/mobile-phones/motorola-p30-note-with-5000mah-battery-zui-40-launched-in-china-43275.html">
+                     
+                                                                                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115713_default_td_600.jpeg" alt="Motorola P30 Note with 5000mAh battery, ZUI 4.0 launched in China" title="Motorola P30 Note with 5000mAh battery, ZUI 4.0 launched in China">   
+                                                     
+                                        <span class="shadow"></span>
+                    </a>
+                </div>
+            </div>
+             
+                        <h1 class="h1FirstReview"><a href="/mobile-phones/motorola-p30-note-with-5000mah-battery-zui-40-launched-in-china-43275.html">Motorola P30 Note with 5000mAh battery, ZUI 4.0 launched in China </a></h1>
+            
+            <div class="meta">
+                 <div class="author"> By Digit NewsDesk </div> 
+                <div class="sub-meta">
+                    <a href="/mobile-phones/motorola-p30-note-with-5000mah-battery-zui-40-launched-in-china-43275.html#disqus_thread"><span class="comments"></span></a>
+                    <em class="date">04 - Sep - 2018</em>
+                </div>
+            </div>
+                    </article>
+            <!-- article -->
+    <article class="article">
+        <div class="tag">News</div>
+	        <div class="visual-holder">
+                <div class="visual">
+                    <a href="/gaming/getting-lethal-with-tirth-mehta-indias-first-esports-medalist-interviewed-43273.html">
+                     
+                                                                                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115710_default_td_600.jpeg" alt="Getting lethal with Tirth Mehta: India’s first eSports medalist interviewed" title="Getting lethal with Tirth Mehta: India’s first eSports medalist interviewed">   
+                                                     
+                                        <span class="shadow"></span>
+                    </a>
+                </div>
+            </div>
+             
+                        <h2><a href="/gaming/getting-lethal-with-tirth-mehta-indias-first-esports-medalist-interviewed-43273.html">Getting lethal with Tirth Mehta: India's first eSports medalist... </a></h2>
+            
+            <div class="meta">
+                 <div class="author"> By Manish Rajesh </div> 
+                <div class="sub-meta">
+                    <a href="/gaming/getting-lethal-with-tirth-mehta-indias-first-esports-medalist-interviewed-43273.html#disqus_thread"><span class="comments"></span></a>
+                    <em class="date">04 - Sep - 2018</em>
+                </div>
+            </div>
+                    </article>
+            <!-- article -->
+    <article class="article">
+        <div class="tag">Feature story</div>
+	        <div class="visual-holder">
+                <div class="visual">
+                    <a href="https://www.digit.in/wearable-devices/goqii-vital-first-impressions-the-ecosystem-grows-with-a-dash-of-colour-42227.html">
+                     
+                                                                                                          
+                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_111296_default_td_300.jpeg" alt="GOQii Vital first impressions: The ecosystem grows with a dash of colour" title="GOQii Vital first impressions: The ecosystem grows with a dash of colour">   
+                                                     
+                                        <span class="shadow"></span>
+                    </a>
+                </div>
+            </div>
+             
+                        <h2><a href="https://www.digit.in/wearable-devices/goqii-vital-first-impressions-the-ecosystem-grows-with-a-dash-of-colour-42227.html">GOQii Vital first impressions: The ecosystem grows with a dash of... </a></h2>
+            
+            <div class="meta">
+                 <div class="author"> By Arnab Mukherjee </div> 
+                <div class="sub-meta">
+                    <a href="https://www.digit.in/wearable-devices/goqii-vital-first-impressions-the-ecosystem-grows-with-a-dash-of-colour-42227.html#disqus_thread"><span class="comments"></span></a>
+                    <em class="date">16 - Jul - 2018</em>
+                </div>
+            </div>
+                    </article>
+     
+
+
+                    </div>
+                    <div class="column2">
+                        
+  		<!-- article -->
+		<article class="article">
+    		<div class="tag">Reviews</div>
+    		<div class="visual-holder">
+        		<div class="visual">
+            	<a href="https://www.digit.in/mobile-phones/samsung-galaxy-note-8-review-68748.html">
+            		                                                          
+                                <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_114170_default_td_600.jpeg" alt="Samsung Galaxy Note 9" title="Samsung Galaxy Note 9">  
+                                                        <span class="shadow"></span>
+            		</a>
+		                            </div>
+                         			<div class="rank orange">79</div>
+            	     		</div>
+    		<h2><a href="https://www.digit.in/mobile-phones/samsung-galaxy-note-8-review-68748.html">Samsung Galaxy Note 9 Review</a></h2>
+    
+		    <div class="meta">
+		        <div class="author"> By Swapnil Mathur </div> 
+		        <div class="sub-meta">
+		            <a href="https://www.digit.in/mobile-phones/samsung-galaxy-note-8-review-68748.html#disqus_thread"><span class="comments"></span></a>
+		            <em class="date">22 - Aug - 2018    </em>
+		        </div>
+		    </div>
+		    </article>
+    		        <!-- advertising -->
+                <div class="advertisements">advertisements</div>
+		<div class="ad desktopAdRemoveInMobile">
+			
+		</div>
+                <div class="ad_slots_mobShowOthHide"></div>
+                
+    
+  		<!-- article -->
+		<article class="article">
+    		<div class="tag">Reviews</div>
+    		<div class="visual-holder">
+        		<div class="visual">
+            	<a href="https://www.digit.in/laptops/asus-zenbook-pro-15-review-135198.html">
+            		                                                          
+                                <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_113771_default_td_600.jpeg" alt="Asus ZenBook Pro 15" title="Asus ZenBook Pro 15">  
+                                                        <span class="shadow"></span>
+            		</a>
+		                            </div>
+                         			<div class="rank orange">75</div>
+            	     		</div>
+    		<h2><a href="https://www.digit.in/laptops/asus-zenbook-pro-15-review-135198.html">Asus ZenBook Pro 15 Review</a></h2>
+    
+		    <div class="meta">
+		        <div class="author"> By Vignesh Giridharan </div> 
+		        <div class="sub-meta">
+		            <a href="https://www.digit.in/laptops/asus-zenbook-pro-15-review-135198.html#disqus_thread"><span class="comments"></span></a>
+		            <em class="date">13 - Aug - 2018    </em>
+		        </div>
+		    </div>
+		    </article>
+    
+ 
+
+
+
+
+                    </div>
+                </div>
+            </section>
+            <div class="break"></div>
+            <!-- carousel -->
+            <section class="carousel2">
+            
+            
+                <h2>Latest Reviews</h2>
+                <div class="mask">
+                    <div class="slideset">
+                                                <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    
+                                                                        <a href="https://www.digit.in/audio-video/sony-ht-s500rf-5-1ch-sound-bar-home-theatre-system-review-136247.html">
+                                                                                                                                 <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115590_default_td_300.jpeg" alt="Sony HT-S500RF 5.1 Sound Bar Home Theatre" title="Sony HT-S500RF 5.1 Sound Bar Home Theatre">  
+                                            
+                                        <span class="shadow"></span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                                                        <div class="rank red">66</div>
+                                                                        <div class="block">
+                                        <div class="area">
+                                            <h3><a href="https://www.digit.in/audio-video/sony-ht-s500rf-5-1ch-sound-bar-home-theatre-system-review-136247.html">Sony HT-S500RF 5.1 Sound Bar Home Theatre Review</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="sub-meta">
+                                        <a href="https://www.digit.in/audio-video/sony-ht-s500rf-5-1ch-sound-bar-home-theatre-system-review-136247.html#disqus_thread"><span class="comments"></span></a>
+                                        <em class="date">04 - Sep - 2018</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                                                <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    
+                                                                        <a href="https://www.digit.in/mobile-phones/10-or-d2-32gb-review-135632.html">
+                                                                                                                                 <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115475_default_td_300.jpeg" alt="10.or D2" title="10.or D2">  
+                                            
+                                        <span class="shadow"></span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                                                        <div class="rank red">56</div>
+                                                                        <div class="block">
+                                        <div class="area">
+                                            <h3><a href="https://www.digit.in/mobile-phones/10-or-d2-32gb-review-135632.html">10.or D2 Review</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="sub-meta">
+                                        <a href="https://www.digit.in/mobile-phones/10-or-d2-32gb-review-135632.html#disqus_thread"><span class="comments"></span></a>
+                                        <em class="date">31 - Aug - 2018</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                                                <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    
+                                                                        <a href="https://www.digit.in/digital-cameras/canon-eos-3000d-kit-ef-s18-55-ii-review-136051.html">
+                                                                                                                                 <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115433_default_td_300.jpeg" alt="Canon EOS 3000D" title="Canon EOS 3000D">  
+                                            
+                                        <span class="shadow"></span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                                                        <div class="rank red">65</div>
+                                                                        <div class="block">
+                                        <div class="area">
+                                            <h3><a href="https://www.digit.in/digital-cameras/canon-eos-3000d-kit-ef-s18-55-ii-review-136051.html">Canon EOS 3000D Review</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="sub-meta">
+                                        <a href="https://www.digit.in/digital-cameras/canon-eos-3000d-kit-ef-s18-55-ii-review-136051.html#disqus_thread"><span class="comments"></span></a>
+                                        <em class="date">30 - Aug - 2018</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                    <div class="ad_slots_mobShowOthHide" style="clear:both;" ></div>
+                        
+                                                <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    
+                                                                        <a href="https://www.digit.in/laptops/asus-rog-strix-scar-ii-gl504-review-136009.html">
+                                                                                                                                 <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115343_default_td_300.jpeg" alt="ASUS ROG STRIX SCAR II GL504" title="ASUS ROG STRIX SCAR II GL504">  
+                                            
+                                        <span class="shadow"></span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                                                        <div class="rank orange">76</div>
+                                                                        <div class="block">
+                                        <div class="area">
+                                            <h3><a href="https://www.digit.in/laptops/asus-rog-strix-scar-ii-gl504-review-136009.html">ASUS ROG STRIX SCAR II GL504 Review</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="sub-meta">
+                                        <a href="https://www.digit.in/laptops/asus-rog-strix-scar-ii-gl504-review-136009.html#disqus_thread"><span class="comments"></span></a>
+                                        <em class="date">30 - Aug - 2018</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                                                <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    
+                                                                        <a href="https://www.digit.in/laptops/hp-pavilion-x360-14-cd0053tx-review-135520.html">
+                                                                                                                                 <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115250_default_td_300.jpeg" alt="HP Pavilion x360 PC" title="HP Pavilion x360 PC">  
+                                            
+                                        <span class="shadow"></span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                                                        <div class="rank red">66</div>
+                                                                        <div class="block">
+                                        <div class="area">
+                                            <h3><a href="https://www.digit.in/laptops/hp-pavilion-x360-14-cd0053tx-review-135520.html">HP Pavilion x360 PC Review</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="sub-meta">
+                                        <a href="https://www.digit.in/laptops/hp-pavilion-x360-14-cd0053tx-review-135520.html#disqus_thread"><span class="comments"></span></a>
+                                        <em class="date">28 - Aug - 2018</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                                                <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    
+                                                                        <a href="https://www.digit.in/audio-video/ant-audio-w56-review-135911.html">
+                                                                                                                                 <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115198_default_td_300.jpeg" alt="Ant Audio W56" title="Ant Audio W56">  
+                                            
+                                        <span class="shadow"></span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                                                        <div class="rank red">65</div>
+                                                                        <div class="block">
+                                        <div class="area">
+                                            <h3><a href="https://www.digit.in/audio-video/ant-audio-w56-review-135911.html">Ant Audio W56 Review</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="sub-meta">
+                                        <a href="https://www.digit.in/audio-video/ant-audio-w56-review-135911.html#disqus_thread"><span class="comments"></span></a>
+                                        <em class="date">28 - Aug - 2018</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                    <div class="ad_slots_mobShowOthHide" style="clear:both;" ></div>
+                        
+                                                <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    
+                                                                        <a href="https://www.digit.in/audio-video/ultimate-ears-wonderboom-freestyle-review-135883.html">
+                                                                                                                                 <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115122_default_td_300.jpeg" alt="Ultimate Ears Wonderboom Freestyle" title="Ultimate Ears Wonderboom Freestyle">  
+                                            
+                                        <span class="shadow"></span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                                                        <div class="rank yellow">81</div>
+                                                                        <div class="block">
+                                        <div class="area">
+                                            <h3><a href="https://www.digit.in/audio-video/ultimate-ears-wonderboom-freestyle-review-135883.html">Ultimate Ears Wonderboom Freestyle Review</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="sub-meta">
+                                        <a href="https://www.digit.in/audio-video/ultimate-ears-wonderboom-freestyle-review-135883.html#disqus_thread"><span class="comments"></span></a>
+                                        <em class="date">27 - Aug - 2018</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                                                <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    
+                                                                        <a href="https://www.digit.in/storage/wd-black-nvme-ssd-1tb-2018-review-135282.html">
+                                                                                                                                 <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_114879_default_td_300.jpeg" alt="WD Black NVMe SSD 1 TB (2018)" title="WD Black NVMe SSD 1 TB (2018)">  
+                                            
+                                        <span class="shadow"></span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                                                        <div class="rank yellow">80</div>
+                                                                        <div class="block">
+                                        <div class="area">
+                                            <h3><a href="https://www.digit.in/storage/wd-black-nvme-ssd-1tb-2018-review-135282.html">WD Black NVMe SSD 1 TB (2018) Review</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="sub-meta">
+                                        <a href="https://www.digit.in/storage/wd-black-nvme-ssd-1tb-2018-review-135282.html#disqus_thread"><span class="comments"></span></a>
+                                        <em class="date">26 - Aug - 2018</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                                                
+                      
+                    </div>
+                </div>
+                <a class="btn-prev" href="#">Previous</a>
+                <a class="btn-next" href="#">Next</a>
+            </section>
+                      
+    <div class="ad_slots_mobShowOthHide" ></div>                          
+
+
+
+
+
+
+            <!-- articles -->
+            <section class="articles-box">
+                <div class="columns">
+                    <div class="column1">
+                        <!-- article -->
+                      
+        <!-- article -->
+    <article class="article">
+        <div class="tag">News</div>
+	        <div class="visual-holder">
+                <div class="visual">
+                    <a href="/general/best-power-bank-deals-under-rs-1000-on-paytm-mall-43268.html">
+                     
+                                                                                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115642_default_td_600.jpeg" alt="Best power bank deals under Rs 1000 on Paytm Mall" title="Best power bank deals under Rs 1000 on Paytm Mall">   
+                                                     
+                                        <span class="shadow"></span>
+                    </a>
+                </div>
+            </div>
+             
+                        <h2><a href="/general/best-power-bank-deals-under-rs-1000-on-paytm-mall-43268.html">Best power bank deals under Rs 1000 on Paytm Mall </a></h2>
+            
+            <div class="meta">
+                 <div class="author"> By yatin singh </div> 
+                <div class="sub-meta">
+                    <a href="/general/best-power-bank-deals-under-rs-1000-on-paytm-mall-43268.html#disqus_thread"><span class="comments"></span></a>
+                    <em class="date">04 - Sep - 2018</em>
+                </div>
+            </div>
+                    </article>
+            <!-- article -->
+    <article class="article">
+        <div class="tag">Feature story</div>
+	        <div class="visual-holder">
+                <div class="visual">
+                    <a href="https://www.digit.in/laptops/lenovo-thinkpad-x1-yoga-2018-first-impressions-42211.html">
+                     
+                                                                                                          
+                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_111268_default_td_300.jpeg" alt="Lenovo ThinkPad X1 Yoga (2018) First Impressions" title="Lenovo ThinkPad X1 Yoga (2018) First Impressions">   
+                                                     
+                                        <span class="shadow"></span>
+                    </a>
+                </div>
+            </div>
+             
+                        <h2><a href="https://www.digit.in/laptops/lenovo-thinkpad-x1-yoga-2018-first-impressions-42211.html">Lenovo ThinkPad X1 Yoga (2018) First Impressions </a></h2>
+            
+            <div class="meta">
+                 <div class="author"> By Vignesh Giridharan </div> 
+                <div class="sub-meta">
+                    <a href="https://www.digit.in/laptops/lenovo-thinkpad-x1-yoga-2018-first-impressions-42211.html#disqus_thread"><span class="comments"></span></a>
+                    <em class="date">15 - Jul - 2018</em>
+                </div>
+            </div>
+                    </article>
+            <!-- article -->
+    <article class="article">
+        <div class="tag">News</div>
+	        <div class="visual-holder">
+                <div class="visual">
+                    <a href="/mobile-phones/oneplus-to-host-an-event-on-january-15-speculated-to-announce-oneplus-6t-or-oneplus-7-43267.html">
+                     
+                                                                                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_115619_default_td_600.jpeg" alt="OnePlus to host an event on January 15, speculated to announce OnePlus 6T or OnePlus 7" title="OnePlus to host an event on January 15, speculated to announce OnePlus 6T or OnePlus 7">   
+                                                     
+                                        <span class="shadow"></span>
+                    </a>
+                </div>
+            </div>
+             
+                        <h2><a href="/mobile-phones/oneplus-to-host-an-event-on-january-15-speculated-to-announce-oneplus-6t-or-oneplus-7-43267.html">OnePlus to host an event on January 15, speculated to announce... </a></h2>
+            
+            <div class="meta">
+                 <div class="author"> By Digit NewsDesk </div> 
+                <div class="sub-meta">
+                    <a href="/mobile-phones/oneplus-to-host-an-event-on-january-15-speculated-to-announce-oneplus-6t-or-oneplus-7-43267.html#disqus_thread"><span class="comments"></span></a>
+                    <em class="date">04 - Sep - 2018</em>
+                </div>
+            </div>
+                    </article>
+     
+
+
+                    </div>
+                    <div class="column2">
+                      
+  		<!-- article -->
+		<article class="article">
+    		<div class="tag">Reviews</div>
+    		<div class="visual-holder">
+        		<div class="visual">
+            	<a href="https://www.digit.in/laptops/asus-tuf-gaming-fx504-review-134190.html">
+            		                                                          
+                                <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_111331_default_td_600.jpeg" alt="ASUS TUF Gaming FX504" title="ASUS TUF Gaming FX504">  
+                                                        <span class="shadow"></span>
+            		</a>
+		                            </div>
+                         			<div class="rank orange">74</div>
+            	     		</div>
+    		<h2><a href="https://www.digit.in/laptops/asus-tuf-gaming-fx504-review-134190.html">ASUS TUF Gaming FX504 Review</a></h2>
+    
+		    <div class="meta">
+		        <div class="author"> By Mithun Mohandas </div> 
+		        <div class="sub-meta">
+		            <a href="https://www.digit.in/laptops/asus-tuf-gaming-fx504-review-134190.html#disqus_thread"><span class="comments"></span></a>
+		            <em class="date">16 - Jul - 2018    </em>
+		        </div>
+		    </div>
+		    </article>
+    		        <!-- advertising -->
+                <div class="advertisements">advertisements</div>
+		<div class="ad desktopAdRemoveInMobile">
+			
+		</div>
+                <div class="ad_slots_mobShowOthHide"></div>
+                
+    
+  		<!-- article -->
+		<article class="article">
+    		<div class="tag">Reviews</div>
+    		<div class="visual-holder">
+        		<div class="visual">
+            	<a href="https://www.digit.in/laptops/lenovo-ideapad-530s-review-132762.html">
+            		                                                          
+                                <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_110168_default_td_600.jpeg" alt="Lenovo IdeaPad 530S" title="Lenovo IdeaPad 530S">  
+                                                        <span class="shadow"></span>
+            		</a>
+		                            </div>
+                         			<div class="rank yellow">82</div>
+            	     		</div>
+    		<h2><a href="https://www.digit.in/laptops/lenovo-ideapad-530s-review-132762.html">Lenovo IdeaPad 530S Review</a></h2>
+    
+		    <div class="meta">
+		        <div class="author"> By Vignesh Giridharan </div> 
+		        <div class="sub-meta">
+		            <a href="https://www.digit.in/laptops/lenovo-ideapad-530s-review-132762.html#disqus_thread"><span class="comments"></span></a>
+		            <em class="date">19 - Aug - 2018    </em>
+		        </div>
+		    </div>
+		    </article>
+    
+ 
+
+
+
+                    </div>
+                </div>
+            </section>
+            <div class="break"></div>
+            <div class="ad_slots_mobShowOthHide"></div> 
+<section class="carousel3">
+                <h2>Latest Photos</h2>
+                <div class="mask">
+                    <div class="slideset">
+                        
+                        
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                                                        <a href="/slideshows/10-essential-laptop-features-in-2018-1.html">
+                                        
+                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_113748_default_td_300.jpeg" alt="10 essential laptop features in 2018" title="10 essential laptop features in 2018">
+                                        
+                                        <span class="shadow"></span>
+                                        
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    
+                                    <h3><a href="/slideshows/10-essential-laptop-features-in-2018-1.html">10 essential laptop features in 2018</a></h3>
+                                                                   </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                                                        <a href="/slideshows/dell-g3-in-pictures-the-sleek-looking-gaming-laptop-for-the-gamer-on-the-move-1.html">
+                                        
+                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_113002_default_td_300.jpeg" alt="Dell G3 in pictures: The sleek looking gaming laptop for the gamer..." title="Dell G3 in pictures: The sleek looking gaming laptop for the gamer...">
+                                        
+                                        <span class="shadow"></span>
+                                        
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    
+                                    <h3><a href="/slideshows/dell-g3-in-pictures-the-sleek-looking-gaming-laptop-for-the-gamer-on-the-move-1.html">Dell G3 in pictures: The sleek looking gaming laptop for the gamer...</a></h3>
+                                                                   </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                                                        <a href="/slideshows/specs-to-look-out-for-while-buying-your-next-laptop-1.html">
+                                        
+                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_113725_default_td_300.jpeg" alt="Specs to look out for while buying your next laptop" title="Specs to look out for while buying your next laptop">
+                                        
+                                        <span class="shadow"></span>
+                                        
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    
+                                    <h3><a href="/slideshows/specs-to-look-out-for-while-buying-your-next-laptop-1.html">Specs to look out for while buying your next laptop</a></h3>
+                                                                   </div>
+                            </div>
+                        </div>
+                        
+                                                    <div class="ad_slots_mobShowOthHide"></div>
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                                                        <a href="/slideshows/10-tips-on-buying-the-right-budget-gaming-laptop-1.html">
+                                        
+                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_113722_default_td_300.jpeg" alt="10 tips on buying the right budget gaming laptop" title="10 tips on buying the right budget gaming laptop">
+                                        
+                                        <span class="shadow"></span>
+                                        
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    
+                                    <h3><a href="/slideshows/10-tips-on-buying-the-right-budget-gaming-laptop-1.html">10 tips on buying the right budget gaming laptop</a></h3>
+                                                                   </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                                                        <a href="/slideshows/ten-mistakes-you-should-avoid-while-buying-your-next-laptop-1.html">
+                                        
+                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_113724_default_td_300.jpeg" alt="Ten mistakes you should avoid while buying your next laptop" title="Ten mistakes you should avoid while buying your next laptop">
+                                        
+                                        <span class="shadow"></span>
+                                        
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    
+                                    <h3><a href="/slideshows/ten-mistakes-you-should-avoid-while-buying-your-next-laptop-1.html">Ten mistakes you should avoid while buying your next laptop</a></h3>
+                                                                   </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                                                        <a href="/slideshows/nokia-x6-in-pictures-nokia-s-first-smartphone-with-a-notch-1.html">
+                                        
+                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_110348_default_td_300.jpeg" alt="Nokia X6 in pictures: Nokia&#039;s first smartphone with a notch" title="Nokia X6 in pictures: Nokia&#039;s first smartphone with a notch">
+                                        
+                                        <span class="shadow"></span>
+                                        
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    
+                                    <h3><a href="/slideshows/nokia-x6-in-pictures-nokia-s-first-smartphone-with-a-notch-1.html">Nokia X6 in pictures: Nokia's first smartphone with a notch</a></h3>
+                                                                   </div>
+                            </div>
+                        </div>
+                        
+                                                    <div class="ad_slots_mobShowOthHide"></div>
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                                                        <a href="/slideshows/xiaomi-blackshark-in-pictures-xiaomi-s-gaming-smartphone-1.html">
+                                        
+                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_110338_default_td_300.jpeg" alt="Xiaomi Black Shark in pictures: Xiaomi&#039;s gaming smartphone" title="Xiaomi Black Shark in pictures: Xiaomi&#039;s gaming smartphone">
+                                        
+                                        <span class="shadow"></span>
+                                        
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    
+                                    <h3><a href="/slideshows/xiaomi-blackshark-in-pictures-xiaomi-s-gaming-smartphone-1.html">Xiaomi Black Shark in pictures: Xiaomi's gaming smartphone</a></h3>
+                                                                   </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                                                        <a href="/slideshows/best-smartphones-in-india-for-all-budgets-1.html">
+                                        
+                                            <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://static.digit.in/default/thumb_107809_default_td_300.jpeg" alt="Best smartphones in India for all budgets (June 2018)" title="Best smartphones in India for all budgets (June 2018)">
+                                        
+                                        <span class="shadow"></span>
+                                        
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    
+                                    <h3><a href="/slideshows/best-smartphones-in-india-for-all-budgets-1.html">Best smartphones in India for all budgets (June 2018)</a></h3>
+                                                                   </div>
+                            </div>
+                        </div>
+                        
+                                                                        
+                    </div>
+                </div>
+                <a class="btn-prev" href="#">Previous</a>
+                <a class="btn-next" href="#">Next</a>
+            </section>
+
+
+            <div class="break"></div>
+            <!-- carousel -->
+            <div class="ad_slots_mobShowOthHide"></div> 
+<section class="carousel3">
+                <h2>Latest Videos</h2>
+                <div class="mask">
+                    <div class="slideset">
+                        
+                        
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    <a href="/videos/experiencing-the-flagship-huawei-nova-3i-for-the-first-time-voxpop-guess-the-price.html">
+                                                                                    <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://digitcdn2.phando.com/sF_35b6snYU/sF_35b6snYU.png" alt="Experiencing the Flagship Huawei Nova 3i for the First Time | VoxPop | Guess The Price?" title="Experiencing the Flagship Huawei Nova 3i for the First Time | VoxPop | Guess The Price?">
+                                                                                
+                                        <span class="shadow"></span>
+                                        <span class="play">Play</span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <h3><a href="/videos/experiencing-the-flagship-huawei-nova-3i-for-the-first-time-voxpop-guess-the-price.html">Experiencing the Flagship Huawei Nova 3i for the First Time |...</a></h3>
+                                    <a class="link-review" href="/videos/all/hands-on/">hands on</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    <a href="/videos/huawei-nova-3i-a-closer-look-at-all-the-superior-ai-enabled-camera-features-digit-in.html">
+                                                                                    <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://digitcdn2.phando.com/sF_35b6snYU/sF_35b6snYU.png" alt="Huawei Nova 3i : A Closer Look at all the Superior AI enabled Camera Features | Digit.in" title="Huawei Nova 3i : A Closer Look at all the Superior AI enabled Camera Features | Digit.in">
+                                                                                
+                                        <span class="shadow"></span>
+                                        <span class="play">Play</span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <h3><a href="/videos/huawei-nova-3i-a-closer-look-at-all-the-superior-ai-enabled-camera-features-digit-in.html">Huawei Nova 3i : A Closer Look at all the Superior AI enabled...</a></h3>
+                                    <a class="link-review" href="/videos/all/General/">General</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    <a href="/videos/asus-rog-strix-gl504-first-look-digitin.html">
+                                                                                    <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://digitcdn2.phando.com/5b15302676f11/5b15302676f11.png" alt="Asus ROG Strix GL504 First Look | Digit.in" title="Asus ROG Strix GL504 First Look | Digit.in">
+                                                                                
+                                        <span class="shadow"></span>
+                                        <span class="play">Play</span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <h3><a href="/videos/asus-rog-strix-gl504-first-look-digitin.html">Asus ROG Strix GL504 First Look | Digit.in</a></h3>
+                                    <a class="link-review" href="/videos/all/hands-on/">hands on</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                    <div class="ad_slots_mobShowOthHide"></div>
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    <a href="/videos/lg-v30s-thinq-home-automation-demo-digitin.html">
+                                                                                    <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://digitcdn2.phando.com/5a975d43d81c3/5a975d43d81c3.png" alt="LG V30S ThinQ home Automation Demo | Digit.in" title="LG V30S ThinQ home Automation Demo | Digit.in">
+                                                                                
+                                        <span class="shadow"></span>
+                                        <span class="play">Play</span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <h3><a href="/videos/lg-v30s-thinq-home-automation-demo-digitin.html">LG V30S ThinQ home Automation Demo | Digit.in</a></h3>
+                                    <a class="link-review" href="/videos/all/hands-on/">hands on</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    <a href="/videos/moto-health-mod-first-look-digitin.html">
+                                                                                    <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://digitcdn2.phando.com/5a975cd511326/5a975cd511326.png" alt="Moto Health Mod First Look | Digit.in" title="Moto Health Mod First Look | Digit.in">
+                                                                                
+                                        <span class="shadow"></span>
+                                        <span class="play">Play</span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <h3><a href="/videos/moto-health-mod-first-look-digitin.html">Moto Health Mod First Look | Digit.in</a></h3>
+                                    <a class="link-review" href="/videos/all/hands-on/">hands on</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                
+                        <div class="slide">
+                            <div class="box" style="float:left;">
+                                <div class="visual">
+                                    <a href="/videos/pepper-humanoid-robot-first-look-digitin.html">
+                                                                                    <img class="lazy" src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/loadingGif.gif?v=82" data-src="https://digitcdn2.phando.com/5a975c46c1d49/5a975c46c1d49.png" alt="Pepper Humanoid Robot First Look | Digit.in" title="Pepper Humanoid Robot First Look | Digit.in">
+                                                                                
+                                        <span class="shadow"></span>
+                                        <span class="play">Play</span>
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <h3><a href="/videos/pepper-humanoid-robot-first-look-digitin.html">Pepper Humanoid Robot First Look | Digit.in</a></h3>
+                                    <a class="link-review" href="/videos/all/hands-on/">hands on</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                    <div class="ad_slots_mobShowOthHide"></div>
+                                                                        
+                    </div>
+                </div>
+                <a class="btn-prev" href="#">Previous</a>
+                <a class="btn-next" href="#">Next</a>
+            </section>
+
+            <!-- commented by Sonam @ 9-sept-2016uncommented @21/sept/2016   /1042151/DGT_Home_reveal_1x1
+            <div style="width:1024px; left: -25%; position: relative; clear: both; height: 700px;">
+   <div class="ad desktopAdRemoveInMobile"></div>
+    <div class="ad_slots_mobShowOthHide"></div> 
+            </div> -->
+                                         <div id="ajax-page1" class="page-holder" data-url="/blockhomeload/0/0/0/0" title="loading page 1"></div>
+                                                        <div id="ajax-page2" class="page-holder" data-url="/blockhomeload/3/2/8/6" title="loading page 2"></div>
+                                                        <div id="ajax-page3" class="page-holder" data-url="/blockhomeload/6/4/16/12" title="loading page 3"></div>
+                                                        <div id="ajax-page4" class="page-holder click-loading" data-url="/blockhomeload/9/6/24/18" title="loading page 4"></div>
+                                                        <div id="ajax-page5" class="page-holder click-loading" data-url="/blockhomeload/12/8/32/24" title="loading page 5"></div>
+                                                        <div id="ajax-page6" class="page-holder click-loading" data-url="/blockhomeload/15/10/40/30" title="loading page 6"></div>
+                                                        <div id="ajax-page7" class="page-holder click-loading" data-url="/blockhomeload/18/12/48/36" title="loading page 7"></div>
+                                                        <div id="ajax-page8" class="page-holder click-loading" data-url="/blockhomeload/21/14/56/42" title="loading page 8"></div>
+                                                        <div id="ajax-page9" class="page-holder click-loading" data-url="/blockhomeload/24/16/64/48" title="loading page 9"></div>
+                                                        <div id="ajax-page10" class="page-holder click-loading" data-url="/blockhomeload/27/18/72/54" title="loading page 10"></div>
+                                    
+                
+
+
+          
+        </div>
+        <div class="loading-box"> <a href="#"><span class="icon"></span><em class="load-text">Load page <span class="page-num">1</span></em></a> </div>
+              </div>
+      					          </div>
+
+<!-- sidebar -->
+<style>
+ #blockSecondHide #adslot2 div:nth-child(2) {display:none !important;}
+</style>
+
+<aside id="sidebar">
+    <!-- advertising -->
+    <div class="advertisements">advertisements</div>
+    <div class="side-ad desktopAdRemoveInMobile" id="blockSecondHide" ></div>
+    <div class="ad_slots_mobShowOthHide"></div>        
+        
+
+    <div class="sidebar-loading">
+        <div class="loading-holder">
+            <!-- popular box -->
+			    
+<!-- popular box -->
+<section class="popular-box">
+    <h2>Most Popular</h2>
+    <!-- popular list -->
+
+    <!-- for first 2 most popular element [ashutosh]  start-->
+    <ul class="popular-list">
+        
+        <div class="side-ad desktopAdRemoveInMobile" id="aboveSponser"></div>
+        
+                
+
+        
+        
+        <li>
+            <div class="visual">
+                                                                    <a class="" href="https://www.digit.in/mobile-phones/performance-showdown-poco-f1-vs-oneplus-6-vs-honor-play-vs-asus-zenfone-5z-43206.html">
+                   
+               <img src="https://static.digit.in/default/thumb_115384_default_td_160.jpeg" alt="Performance Showdown: Poco F1 vs OnePlus 6 vs Honor Play vs Asus Zenfone 5z" title="Performance Showdown: Poco F1 vs OnePlus 6 vs Honor Play vs Asus Zenfone 5z">
+
+                 
+                                                        </a>
+                            </div>
+            <div class="txt">
+                <strong class="title"><a href="https://www.digit.in/mobile-phones/performance-showdown-poco-f1-vs-oneplus-6-vs-honor-play-vs-asus-zenfone-5z-43206.html">Performance Showdown: Poco F1 vs OnePlus 6 vs Honor Play vs...</a></strong>
+                <div class="sub-meta">
+                    <span class="comments"></span>
+                    <em class="date">30 - Aug - 2018</em>
+                </div>
+                            </div>
+        </li>
+                    
+        <li>
+            <div class="visual">
+                                                                    <a class="" href="https://www.digit.in/mobile-phones/xiaomi-poco-f1-doesnt-support-hd-streaming-43242.html">
+                   
+               <img src="https://static.digit.in/default/thumb_114198_default_td_160.jpeg" alt="Xiaomi Poco F1 doesn’t support HD streaming" title="Xiaomi Poco F1 doesn’t support HD streaming">
+
+                 
+                                                        </a>
+                            </div>
+            <div class="txt">
+                <strong class="title"><a href="https://www.digit.in/mobile-phones/xiaomi-poco-f1-doesnt-support-hd-streaming-43242.html">Xiaomi Poco F1 doesn't support HD streaming</a></strong>
+                <div class="sub-meta">
+                    <span class="comments"></span>
+                    <em class="date">01 - Sep - 2018</em>
+                </div>
+                            </div>
+        </li>
+                    
+        <li>
+            <div class="visual">
+                                                                    <a class="" href="https://www.digit.in/mobile-phones/xiaomi-mi-a2-review-review-42695.html">
+                   
+               <img src="https://static.digit.in/default/thumb_113544_default_td_160.jpeg" alt="Xiaomi Mi A2" title="Xiaomi Mi A2">
+
+                 
+                                                        </a>
+                            </div>
+            <div class="txt">
+                <strong class="title"><a href="https://www.digit.in/mobile-phones/xiaomi-mi-a2-review-review-42695.html">Xiaomi Mi A2</a></strong>
+                <div class="sub-meta">
+                    <span class="comments"></span>
+                    <em class="date">08 - Aug - 2018</em>
+                </div>
+                            </div>
+        </li>
+                    
+        <li>
+            <div class="visual">
+                                                                    <a class="" href="https://www.digit.in/mobile-phones/xiaomi-redmi-4-2gb-review-43041.html">
+                   
+               <img src="https://static.digit.in/default/thumb_114614_default_td_160.jpeg" alt="Poco F1" title="Poco F1">
+
+                 
+                                                        </a>
+                            </div>
+            <div class="txt">
+                <strong class="title"><a href="https://www.digit.in/mobile-phones/xiaomi-redmi-4-2gb-review-43041.html">Poco F1</a></strong>
+                <div class="sub-meta">
+                    <span class="comments"></span>
+                    <em class="date">23 - Aug - 2018</em>
+                </div>
+                            </div>
+        </li>
+                    
+        <li>
+            <div class="visual">
+                                                                    <a class="" href="https://www.digit.in/mobile-phones/apple-to-launch-2018-iphones-on-september-12-43220.html">
+                   
+               <img src="https://static.digit.in/default/thumb_115445_default_td_160.jpeg" alt="Apple to launch 2018 iPhones on September 12" title="Apple to launch 2018 iPhones on September 12">
+
+                 
+                                                        </a>
+                            </div>
+            <div class="txt">
+                <strong class="title"><a href="https://www.digit.in/mobile-phones/apple-to-launch-2018-iphones-on-september-12-43220.html">Apple to launch 2018 iPhones on September 12</a></strong>
+                <div class="sub-meta">
+                    <span class="comments"></span>
+                    <em class="date">31 - Aug - 2018</em>
+                </div>
+                            </div>
+        </li>
+                    
+
+            </ul>
+        </section>
+    
+
+
+        
+        
+  
+
+
+
+
+			
+            
+            <div id="adunit_4ovbz67mf8" class="ntinfeedad"></div>
+            <script>
+//            var unit_id = "4ovbz67mf8"; serve_inStream(unit_id, 'adunit_4ovbz67mf8');
+            </script>
+            <div class="advertisements">advertisements</div>
+            <div class="side-ad desktopAdRemoveInMobile" style="margin:20px 0;"></div>
+
+<!-- hubs based widget for software hubs @22-May-2017-->
+ <!-- Security Watch powered by Kaspersky -->
+<style>
+.kasper{
+     width:55% !important;
+    float: left;
+    font: 200 2.143em/1.333em 'Titillium Web',sans-serif;
+}
+.kas{
+ width: 107px;
+    float: right;
+    margin: -5px 0 6px 0;
+}
+.kas img{
+  width:100%;
+}
+</style>
+<div class="advertisements">Sponsored</div>
+<div class="scoPannel asideShiftBox">
+    <section class="specs-box">
+        <div style="color:#ff0048;" class="kasper">Storage Hub  </div> <div style="float:right; text-align:right; margin: 3px 0 0px 0; width: 88px; font-size: 10px;
+">Powered By </div>  <span class="kas"><a href="https://www.digit.in/tracker/seagate-sponsored.html"><img src="https://cdn.digit.in/bundles/thinkdigitfrontend/images/seagate.png?v=82" alt="Seagate" title="Seagate"></a></span>
+       
+ <ul class="scoul fullWidthList">
+            <li>
+            <a href="https://www.digit.in/storage/seagate-launches-nytro-1000-sata-ssd-series-with-unique-durawrite-technology-42733.html" > 
+              Seagate Launches Nytro 1000 SATA SSD Series with Unique DuraWrite Technology</a>
+            </li>          
+             <li>
+            <a href="https://www.digit.in/general/7-tips-to-take-your-travel-photography-to-a-higher-level-from-droneheroes-42732.html"  > 
+              	7 Tips to Take Your Travel Photography to a Higher Level — from DroneHeroes</a>
+            </li>
+              <li>
+            <a href="https://www.digit.in/storage/filmmaker-and-youtube-reviewer-kitty-peters-tests-drone-photography-tools-that-foster-creativity-42726.html"  > 
+              Filmmaker and YouTube Reviewer Kitty Peters Tests Drone Photography Tools that Foster Creativity</a>
+            </li>
+              <li>
+            <a href="https://www.digit.in/storage/flash-memory-summit-best-of-show-award-seagate-nytro-1000-sata-ssd-series-with-durawrite-42724.html"> 
+              	Flash Memory Summit “Best of Show” Award: Seagate Nytro 1000 SATA SSD Series with DuraWrite</a>
+            </li>
+     </ul>
+    </section>
+</div>
+
+
+
+
+
+ <div class="specs-box">
+		
+<h2 class="h2heading_02">Popular in Mobile Phones</h2>
+<ul class="scoul fullWidthList">
+
+		            						<li><a href="https://www.digit.in/mobile-phones/xiaomi-mi-a2-price-125589.html" onclick="ga('send', 'event', 'Product_RHS', 'Xiaomi Mi A2','')" >Xiaomi Mi A2</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/huawei-honor-play-price-132389.html" onclick="ga('send', 'event', 'Product_RHS', 'Huawei Honor Play','')" >Huawei Honor Play</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/samsung-galaxy-j8-2018-price-128725.html" onclick="ga('send', 'event', 'Product_RHS', 'Samsung Galaxy J8 2018','')" >Samsung Galaxy J8 2018</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/nokia-6-price-55215.html" onclick="ga('send', 'event', 'Product_RHS', 'Nokia 6','')" >Nokia 6</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/nokia-6-1-price-131171.html" onclick="ga('send', 'event', 'Product_RHS', 'Nokia 6.1 Plus','')" >Nokia 6.1 Plus</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/huawei-honor-9n-32gb-price-134568.html" onclick="ga('send', 'event', 'Product_RHS', 'Huawei Honor 9N 32GB','')" >Huawei Honor 9N 32GB</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/motorola-moto-g6-plus-price-69975.html" onclick="ga('send', 'event', 'Product_RHS', 'Motorola Moto G6 Plus','')" >Motorola Moto G6 Plus</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/xiaomi-pocophone-f1-price-134764.html" onclick="ga('send', 'event', 'Product_RHS', 'Xiaomi Pocophone F1','')" >Xiaomi Pocophone F1</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/oneplus-6t-price-135240.html" onclick="ga('send', 'event', 'Product_RHS', 'OnePlus 6T','')" >OnePlus 6T</a></li>
+		            						<li><a href="https://www.digit.in/mobile-phones/oppo-f9-pro-price-134946.html" onclick="ga('send', 'event', 'Product_RHS', 'Oppo F9 Pro','')" >Oppo F9 Pro</a></li>
+		
+</ul>
+	</div>
+
+            <div class="side-ad desktopAdRemoveInMobile topdistance-lhs" id="fix_last_ad"></div>
+            <div class="ad_slots_mobShowOthHide"></div>
+        </div>
+            </div>
+</aside>
+
+<script type="text/javascript">
+    function subscribeNewsletter(id){
+    var email =  $('#'+id);
+    if($(email).val() != '' && checkEmail(email)){
+         $.ajax({
+            url: "/block/subscribe/newsletter",
+            data:{"email": $(email).val()},
+            type:'POST',
+            success: function(data){
+            	ajaxindicatorstop();
+                $('label.messageText > center').html(data.message);
+                 $("#askQuestion-1").trigger("click");
+                 //alert(data.message);
+                
+            },
+            error: function(err){
+               // alert('Some error has been occur. Please try again.');
+            	email.focus();
+            }
+            });
+    }
+    
+}
+
+function checkEmail(email) {
+
+    
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test($(email).val())) {
+        $('label.messageText > center').html('Please provide a valid email address');
+        $("#askQuestion-1").trigger("click");
+   
+    
+    return false;
+ }
+ return true;
+}
+
+    </script>
+</div></div><script type="application/ld+json">
+                            {
+                            "@context": "https://schema.org",
+                            "@type": "WebSite",
+                            "url": "https://www.digit.in",
+                            "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://www.digit.in/search/?keyword={search_term}",
+                            "query-input": "required name=search_term"
+                            }
+                            }
+                        </script></div><!-- sticky_footer_panel --><!-- End sticky_footer_panel --><!-- footer --><footer id="footer"><div class="footer-holder"><div class="area1"><!-- bottom navigation --><ul class="bottom-nav"><li><a href="https://www.digit.in/about-us/">ABOUT US</a></li><li><a href="https://www.digit.in/about-us/#ContactUs">CONTACT US</a></li><li><a href="https://www.digit.in/about-us/#AdvertiseWithUs">ADVERTISE</a></li><li><a href="https://store.digit.in/">SUBSCRIBE</a></li><li><a href="https://www.digit.in/about-us/#PrivacyPolicy">PRIVACY</a></li><li><a href="https://www.digit.in/about-us/#TermsService">TERMS</a></li><li><a href="https://www.digit.in/sitemap/">SITEMAP HTML</a></li></ul></div><div class="area2"><!-- socials --><ul class="bottom-socials"><script>
+    function putUrl(redirecturl) {
+        var route = '/set_url'; 
+        var url1 = document.URL.replace('&amp;', '&');
+        $.ajax
+                ({
+                    type: "POST",
+                    url: route,
+                    data: {"url": url1},
+                    cache: false,
+                    success: function(html)
+                    {
+                        window.location.href = redirecturl;
+                    },
+                    error: function(html) {
+                        //alert('rr');
+                    }
+                });
+        return false;
+    }
+</script><li><a target="_blank"  href="https://www.facebook.com/thinkdigit" class="facebook"  rel="noreferrer"></a></li><li><a target="_blank"  href="https://twitter.com/digitindia" class="twitter"  rel="noreferrer"></a></li><li><a target="_blank"  href="https://plus.google.com/107491101603370931278" class="google-plus"  rel="noreferrer"></a></li><li><a target="_blank"  href="https://www.digit.in/rss-feed/" class="rss" rel="noreferrer"></a></li></ul><!-- socials 
+<ul class="bottom-socials"><li><a class="facebook" href="#">Facebook</a></li><li><a class="twitter" href="#">Twitter</a></li><li><a class="google-plus" href="#">Google+</a></li><li><a class="rss" href="#">RSS</a></li></ul>--></div><div class="box1"><a class="logo-digit" href="/">Digit</a><div class="txt"><div style="margin: 0 0 12px;" >Digit caters to the largest community of tech buyers, users and enthusiasts in India. The all new Digit.in continues the legacy of Thinkdigit.com as one of the largest portals in India committed to technology users and buyers. Digit is also one of the most trusted names when it comes to technology reviews and buying advice and is home to the Digit Test Lab, India's most proficient center for testing and reviewing technology products.</div></div></div><div class="box2"><a class="logo-99" href="https://www.9dot9.in/">9.9 Group</a><div class="txt"><div style="margin: 0 0 12px;" >We are about leadership – the 9.9 kind! Building a leading media company out of India. And, grooming new leaders for this promising industry.</div><div style="margin: 0 0 12px;" >Copyright &copy; 2007-18 9.9 Group Pvt. Ltd. All Rights Reserved.</div></div></div></div><script type="text/javascript">
+$(function(){
+document.body.style.width = "100%";
+});
+</script><!-- Put this at the end of the page--><!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent --><!-- <link rel="stylesheet" type="text/css" href="http://assets.cookieconsent.silktide.com/current/style.min.css"/><script  type="text/javascript" src="http://assets.cookieconsent.silktide.com/current/plugin.min.js"></script> --><script async  type="text/javascript" src="https://cdn.digit.in/bundles/thinkdigitfrontend/js/Silktide.plugin.min.js?v=82"></script><script type="text/javascript"></script><!-- End Cookie Consent plugin --><!-- Start Himanshi Gaur 2nd apr --><!-- Hot Deals --><div class="hotDealsPopZone"><div class="titleHotDeal"><i class="fa fa-close closeBtn"></i></div><ul class="hotDealList"><li><a  href="/amazon/merchantdealtrack.php?source_origin=https://www.digit.in/&amp;tdmid=149411437&amp;listedOn=Hotdeal&amp;widget=hotdeal&amp;lang=en" onclick="ga('send', 'event', 'Hot_Deals', 'amazon', 'RealMe 1 (Diamond Black, 4+64 GB)', 1 );" target = "_blank"><div class="hdThumb"><img alt="Buy from amazon" src="https://images-eu.ssl-images-amazon.com/images/I/41BABAZ9RlL._SL75_.jpg" /></div><div class="hdInfo"><div class="hd_title" title="RealMe 1 (Diamond Black, 4+64 GB)">RealMe 1 (Diamond Black, </div><div class="hd_price"><i class="fa fa-rupee"></i>10,990/- </div><div class="hd_marchant_Buy"><span class="hd_marchant"><img src="https://static.digit.in/default/thumb_24165_default_td_160.png" target="_blank" alt="Buy from amazon" title="Buy from amazon" /></span><span class="hd_Buy"><i class="fa fa-shopping-cart"></i> Buy Now</span></div></div></a></li><li><a  href="/amazon/merchantdealtrack.php?source_origin=https://www.digit.in/&amp;tdmid=133345571&amp;listedOn=Hotdeal&amp;widget=hotdeal&amp;lang=en" onclick="ga('send', 'event', 'Hot_Deals', 'amazon', 'Honor 7X (Blue, 4GB RAM + 64GB Memory)', 2 );" target = "_blank"><div class="hdThumb"><img alt="Buy from amazon" src="https://images-eu.ssl-images-amazon.com/images/I/41dB9LZpWJL._SL75_.jpg" /></div><div class="hdInfo"><div class="hd_title" title="Honor 7X (Blue, 4GB RAM + 64GB Memory)">Honor 7X (Blue, 4GB RAM +</div><div class="hd_price"><i class="fa fa-rupee"></i>9,999/- </div><div class="hd_marchant_Buy"><span class="hd_marchant"><img src="https://static.digit.in/default/thumb_24165_default_td_160.png" target="_blank" alt="Buy from amazon" title="Buy from amazon" /></span><span class="hd_Buy"><i class="fa fa-shopping-cart"></i> Buy Now</span></div></div></a></li><li><a  href="/paytm/tracker/samsung-galaxy-j8-2018-64gb-blue-149643497" onclick="ga('send', 'event', 'Hot_Deals', 'paytm', 'Samsung Galaxy J8 (2018) 64 GB Blue', 3 );" target = "_blank"><div class="hdThumb"><img alt="Buy from paytm" src="https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBSAMSUNG-GALASTPL1766172E48387A/0x160/5.jpg" /></div><div class="hdInfo"><div class="hd_title" title="Samsung Galaxy J8 (2018) 64 GB Blue">Samsung Galaxy J8 (2018) </div><div class="hd_price"><i class="fa fa-rupee"></i>16,990/- </div><div class="hd_marchant_Buy"><span class="hd_marchant"><img src="https://static.digit.in/default/thumb_103446_default_td_160.gif" target="_blank" alt="Buy from paytm" title="Buy from paytm" /></span><span class="hd_Buy"><i class="fa fa-shopping-cart"></i> Buy Now</span></div></div></a></li><li><a  href="/paytm/tracker/haier-direct-cool-170-l-single-door-refrigerator-hrd-1703sr-e-burgundy-red-145763540" onclick="ga('send', 'event', 'Hot_Deals', 'paytm', 'Haier Direct Cool 170 L Single Door Refrigerator (HRD-1703SR-E, Burgundy Red)', 4 );" target = "_blank"><div class="hdThumb"><img alt="Buy from paytm" src="https://assetscdn1.paytm.com/images/catalog/product/L/LA/LARHAIER-DIRECTTAOR8562335D103403/0x160/28.jpg" /></div><div class="hdInfo"><div class="hd_title" title="Haier Direct Cool 170 L Single Door Refrigerator (HRD-1703SR-E, Burgundy Red)">Haier Direct Cool 170 L S</div><div class="hd_price"><i class="fa fa-rupee"></i>9,338/- </div><div class="hd_marchant_Buy"><span class="hd_marchant"><img src="https://static.digit.in/default/thumb_103446_default_td_160.gif" target="_blank" alt="Buy from paytm" title="Buy from paytm" /></span><span class="hd_Buy"><i class="fa fa-shopping-cart"></i> Buy Now</span></div></div></a></li></ul></div><!--end hotDealsPopZone --><script type="text/javascript">
+    //Hot Deal popup show and hide
+    if (document.querySelector('.hotDeals')) {
+        document.querySelector('.hotDeals').addEventListener('mouseover', function(){
+            document.querySelector('.hotDealsPopZone').classList.add('hd_show');
+            document.querySelector('.hotDeals').classList.add('redBg');
+        });
+        document.querySelector('.hotDealsPopZone').addEventListener('mouseover', function(){
+            document.querySelector('.hotDealsPopZone').classList.add('hd_show');
+            document.querySelector('.hotDeals').classList.add('redBg');
+        });
+        document.querySelector('.hotDealsPopZone').addEventListener('mouseout', function(){
+            document.querySelector('.hotDealsPopZone').classList.remove('hd_show');
+            document.querySelector('.hotDeals').classList.remove('redBg');
+        });
+        document.querySelector('.hotDeals').addEventListener('mouseout', function(){
+            document.querySelector('.hotDealsPopZone').classList.remove('hd_show');
+            document.querySelector('.hotDeals').classList.remove('redBg');
+        });
+    }
+    if (document.querySelector('.hotDealsM')) {
+        document.querySelector('.hotDealsM').addEventListener('click', function(){
+        document.querySelector('.hotDealsPopZone').classList.add('hd_show');
+        });
+    }
+    document.querySelector('.closeBtn').addEventListener('click', function(){
+        document.querySelector('.hotDealsPopZone').classList.remove('hd_show');
+        document.querySelector('.hotDeals').classList.remove('redBg');
+    });
+</script><!-- End Himanshi Gaur --><!-- Google Tag Manager by Jai | 7/06/2016 --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NDN46D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NDN46D');</script><!-- End Google Tag Manager --></footer></div><!-- another site display advertise --><!-- ABC Tag --><script language="JavaScript">
+              var head        = document.getElementsByTagName('body')[0];
+              var script      = document.createElement('script');
+              var timestamp   = new Date().getTime();
+              script.type     = 'text/javascript';
+              script.src      ='https://secure-gl.imrworldwide.com/cgi-bin/m?ci=ent1236951067&am=3&mr=1&ty=js&ep=1&at=view&rt=banner&st=image&ca=cmp957735&cr=crv2371679&pc=plc40469141&r=' + timestamp;
+              head.appendChild(script);
+          </script><noscript><img src="https://secure-gl.imrworldwide.com/cgi-bin/m?ci=ent1236951067&am=3&ep=1&at=view&rt=banner&st=image&ca=cmp957735&cr=crv2371679&pc=plc40469141&r=[timestamp]" style="display:none"/></noscript><!-- End ABC Tag --><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"481b35eff5","applicationID":"36700031","transactionName":"ZQBRYhYFW0EDAEZdC1xKclUQDVpcTTdaXQpZAVpRDRBzQA0NRlEKVidGWAAIUAggD11XD3QKXEIBFg9aDRdWUQVe","queueTime":0,"applicationTime":329,"atts":"SUdSFF4fSE8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>       
+
+</html>
+
