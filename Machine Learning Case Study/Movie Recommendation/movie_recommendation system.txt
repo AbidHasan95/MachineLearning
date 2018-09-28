@@ -1,0 +1,3 @@
+Columns needed to build a movie recommendation system:
+
+Production Country, Genre, Studio, Imdb rating, Total votes in Imdb, Spoken Languages(If Movie released in multiple Languages),Original Language, Runtime, Awards, Live Action/Animated, Budget
